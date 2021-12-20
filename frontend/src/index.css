@@ -1,0 +1,124 @@
+body {
+  font-family: "Overpass", sans-serif !important;
+  color: #1A1F2F !important;
+  font-weight: 400 !important;
+}
+
+.color-white{
+  color: #FFFFFF !important;
+}
+
+.bg-blue-marine{
+  background: #1A1F2F !important;
+}
+
+.bg-blue-marine-min{
+  background: #2A3456 !important;
+}
+
+.bg-green{
+  background: #76cec1 !important;
+}
+
+.card-green{
+  font-size: 18px !important;
+  padding-top: 10px !important;
+  padding-bottom: 5px !important;
+}
+
+.padding-small{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.bg-blue-white{
+  background: #2DA6DC !important;
+}
+
+.blue-marine{
+  color: #1A1F2F !important;
+}
+
+.blue-white{
+  color: #2DA6DC !important;
+}
+
+.font-5{
+  font-size: 5rem !important;
+}
+
+.font-1{
+  font-size: 1rem !important;
+}
+
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle{
+  font-family: "Overpass", sans-serif !important;
+  color: #1A1F2F !important;
+  font-weight: bold;
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6{
+  font-family: "Overpass", sans-serif !important;
+}
+
+*+.uk-h1, *+.uk-h2, *+.uk-h3, *+.uk-h4, *+.uk-h5, *+.uk-h6, *+.uk-heading-2xlarge, *+.uk-heading-large, *+.uk-heading-medium, *+.uk-heading-small, *+.uk-heading-xlarge, *+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
+  margin-top: 20px !important;
+}
+
+.divider{
+  margin: 15px 0 15px 0 !important;
+  border-top: 2px solid #e5e5e5 !important;
+}
+
+.active{
+  border-bottom: 3px solid #2DA6DC !important;
+}
+
+.uk-dotnav>*>:active{
+  background-color: #2DA6DC !important;
+  border-color: transparent;
+}
+
+.uk-dotnav>*>:hover{
+  background-color: #2DA6DC !important;
+  border-color: transparent;
+}
+
+.uk-dotnav>.uk-active>*{
+  background-color: #2DA6DC !important;
+  border-color: transparent;
+}
+
+.uk-dotnav>*>*{
+  border: 2px solid #2DA6DC !important;
+  width: 12px;
+  height: 12px;
+}
+
+.button-resize{
+  border: 2px solid #949494 !important;
+  font-weight: bold !important;
+  padding: 4px 30px !important;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  text-align: center !important;
+  border-radius: 8px !important;
+}
+
+.uk-article-title {
+  font-size: 28px !important;
+  font-weight: bold;
+}
+
+.background-gray{
+  background: #dfdfdf !important;
+}
+
+.border-radius-top{
+  border-top-left-radius: 25px !important;
+  border-top-right-radius: 25px !important;
+}
+
+.border-radius{
+  border-radius: 25px !important;
+}
