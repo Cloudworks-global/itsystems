@@ -23,7 +23,7 @@ export const Capabilities = () => {
                                 <img src={card01} alt="" className='border-radius-top' />
                             </div>
                             <div className="uk-card-body uk-padding-large">
-                                <h3 className="uk-card-title">We offer expertise</h3>
+                                <h3 className="uk-card-title"><b>We offer expertise</b></h3>
                                 <p>In developing systems by using
                                     Microsoft technology, especially
                                     .Net custom developments,
@@ -37,7 +37,7 @@ export const Capabilities = () => {
                                 <img src={card02} alt="" className='border-radius-top' />
                             </div>
                             <div className="uk-card-body uk-padding-large">
-                                <h3 className="uk-card-title">Experience and knowledge</h3>
+                                <h3 className="uk-card-title"><b>Experience and knowledge</b></h3>
                                 <p>We provide experience and
                                 knowledge in each of our services.
                                 We have trained and certified
@@ -52,7 +52,7 @@ export const Capabilities = () => {
                                 <img src={card03} alt="" className='border-radius-top' />
                             </div>
                             <div className="uk-card-body uk-padding-large">
-                                <h3 className="uk-card-title">High value-added outcomes</h3>
+                                <h3 className="uk-card-title"><b>High value-added outcomes</b></h3>
                                 <p>We develop high value-added
                                 outcomes with significant cost
                                 savings for our customers.</p>

@@ -19,7 +19,7 @@ export const CardsAbout = () => {
                     </div>
                 </div>
 
-                <div className="uk-grid-medium uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid="true">
+                <div className="uk-grid-medium uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center uk-grid-match" uk-grid="true">
                     <div>
                         <div className="uk-card uk-card-body">
                             <article className="uk-article">
@@ -30,7 +30,7 @@ export const CardsAbout = () => {
 
                                 <p>Staying updated with the latest technology
                                 trends is essential for ITSystems. All of our
-                                developers should also remain exible to
+                                developers should also remain asexible to
                                 learn new tools and technologies as per the
                                 work requirement and changing trends.</p>
 
@@ -57,7 +57,7 @@ export const CardsAbout = () => {
                     </div>
                 </div>
 
-                <div className="uk-grid-medium uk-child-width-1-3 uk-text-center uk-grid-match" uk-grid="true">
+                <div className="uk-grid-medium uk-child-width-1-1@s uk-child-width-1-3@m uk-text-center uk-grid-match" uk-grid="true">
                     <div>
                         <div className="uk-card uk-card-body">
                             <article className="uk-article">
@@ -70,7 +70,7 @@ export const CardsAbout = () => {
                                 software applications, but a great software
                                 developer is the one who apart from mastering
                                 the skills, also understands the business
-                                signicance of the software application. This
+                                signiuscance of the software application. This
                                 last feature is what we search in our employees.</p>
 
                             </article>
@@ -87,7 +87,7 @@ export const CardsAbout = () => {
                                 <p>Collaboration and support is critical to how
                                 we develop as a team and it is the backbone
                                 of what makes us great. It does not matter if
-                                we are in dierent locations, what matters is
+                                we are in dieserent locations, what matters is
                                 that we work as a global team.</p>
 
                             </article>

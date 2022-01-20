@@ -18,7 +18,7 @@ export const OfferHome = () => {
                 </div>
             </div>
 
-            <div className="uk-grid-medium uk-child-width-1-2 uk-grid-match" uk-grid="true">
+            <div className="uk-grid-medium uk-padding uk-child-width-1-1@s uk-child-width-1-2@m uk-grid-match" uk-grid="true">
                 <div>
                     <div className="uk-card uk-card-body">
                         <article className="uk-article">
@@ -34,13 +34,6 @@ export const OfferHome = () => {
                                 clients to understand what matters most to them, their key
                                 drivers for success and how to give them the freedom and
                                 control they need to do great things.</p>
-
-                            <div className="uk-grid-small uk-child-width-auto" uk-grid="true">
-                                <div>
-                                    <Link className="uk-button uk-button-default button-resize" to="#" >Click here</Link>
-                                </div>
-                            </div>
-
                         </article>
                     </div>
                 </div>
@@ -57,12 +50,6 @@ export const OfferHome = () => {
                             their life easier. We work hard, we resolve issues and we address
                             your challenges. We lead by example in everything that
                             we do and we do with respect and professionalism.</p>
-
-                            <div className="uk-grid-small uk-child-width-auto" uk-grid="true">
-                                <div>
-                                    <Link className="uk-button uk-button-default button-resize" to="#" >Click here</Link>
-                                </div>
-                            </div>
 
                         </article>
                     </div>
@@ -81,12 +68,6 @@ export const OfferHome = () => {
                             provide great customer service to our clients so we can all
                             achieve better outcomes.</p>
 
-                            <div className="uk-grid-small uk-child-width-auto" uk-grid="true">
-                                <div>
-                                    <Link className="uk-button uk-button-default button-resize" to="#" >Click here</Link>
-                                </div>
-                            </div>
-
                         </article>
                     </div>
                 </div>
@@ -102,12 +83,6 @@ export const OfferHome = () => {
                             team and it is the backbone of what makes us great. It does
                             not matter if we are in different locations, what matters is that
                             we work as a global team.</p>
-
-                            <div className="uk-grid-small uk-child-width-auto" uk-grid="true">
-                                <div>
-                                    <Link className="uk-button uk-button-default button-resize" to="#" >Click here</Link>
-                                </div>
-                            </div>
 
                         </article>
                     </div>

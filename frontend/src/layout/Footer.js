@@ -10,11 +10,10 @@ export const Footer = () => {
     <div className="background-primary">
       <div className="uk-container uk-container-medium">
         <div
-          className="uk-grid-divider uk-child-width-expand@s uk-text-center uk-padding"
+          className="uk-grid-divider uk-child-width-expand@s uk-padding"
           uk-grid="true"
         >
-          <div>
-            <Link to="#" className="uk-logo">
+          <div className="uk-text-center">
               <img
                 className="uk-responsive-width"
                 style={{
@@ -24,9 +23,8 @@ export const Footer = () => {
                 src={logo}
                 alt="logo"
               />
-            </Link>
           </div>
-          <div>
+          <div className="uk-text-center">
             <img
               className="uk-responsive-width"
               style={{
@@ -37,12 +35,12 @@ export const Footer = () => {
               alt="logo"
             />
           </div>
-          <div>
+          <div className="uk-text-center">
             <article className="uk-article">
 
-                <p className="uk-text-lead gray">Contact Us Today</p>
+                <h4 className="gray"><b>Contact Us Today</b></h4>
 
-                <ul className="uk-list gray">
+                <ul className="uk-list uk-list-collapse gray">
                     <li>Phone: (+598) 9125-9420</li>
                     <li>Email: info@itsystemsinnova.com</li>
                     <li>Address: Tacuarembó 1429</li>

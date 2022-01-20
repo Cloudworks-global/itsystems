@@ -1,101 +1,188 @@
 body {
   font-family: "Overpass", sans-serif !important;
-  color: #1A1F2F !important;
+  color: #1a1f2f !important;
   font-weight: 400 !important;
 }
 
-.color-white{
-  color: #FFFFFF !important;
+.color-white {
+  color: #ffffff !important;
 }
 
-.bg-blue-marine{
-  background: #1A1F2F !important;
+.bg-blue-marine {
+  background: #1a1f2f !important;
 }
 
-.bg-blue-marine-min{
-  background: #2A3456 !important;
+.bg-blue-marine01 {
+  background: #2e354a !important;
 }
 
-.bg-green{
+.bg-blue-marine02 {
+  background: #3d455c !important;
+}
+
+.bg-blue-marine03 {
+  background: #515970 !important;
+}
+
+.bg-blue-marine-min {
+  background: #2a3456 !important;
+}
+.uk-slidenav {
+  color: rgb(0 0 0 / 100%);
+}
+
+.bg-green {
   background: #76cec1 !important;
 }
 
-.card-green{
+.uk-button-pink {
+  background-color: #fd6c85;
+  color: white;
+  border-radius: 0.4rem;
+  border-color: #fd6c85;
+}
+
+.uk-button-pink:hover {
+  background-color: #fd6c85;
+  color: white;
+  border-radius: 0.4rem;
+  border-color: #fd6c85;
+}
+
+.uk-button-pink:focus {
+  background-color: #fd6c85;
+  color: white;
+  border-radius: 0.4rem;
+  border-color: #fd6c85;
+}
+
+.uk-grid-divider>:not(.uk-first-column)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 2px solid #f3f3f31a;
+}
+
+.active {
+  color: white !important;
+}
+
+.card-green {
   font-size: 18px !important;
   padding-top: 10px !important;
   padding-bottom: 5px !important;
 }
 
-.padding-small{
+.padding-small {
   padding-top: 20px;
   padding-bottom: 10px;
 }
 
-.bg-blue-white{
-  background: #2DA6DC !important;
+.bg-blue-white {
+  background: #2da6dc !important;
 }
 
-.blue-marine{
-  color: #1A1F2F !important;
+.blue-marine {
+  color: #1a1f2f !important;
 }
 
-.blue-white{
-  color: #2DA6DC !important;
+.blue-white {
+  color: #2da6dc !important;
 }
 
-.font-5{
+.font-5 {
   font-size: 5rem !important;
 }
 
-.font-1{
+.font-1 {
   font-size: 1rem !important;
 }
 
-.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle{
+.uk-navbar-item,
+.uk-navbar-nav > li > a,
+.uk-navbar-toggle {
   font-family: "Overpass", sans-serif !important;
-  color: #1A1F2F !important;
+  color: #1a1f2f !important;
   font-weight: bold;
 }
 
-.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6{
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6,
+.uk-heading-2xlarge,
+.uk-heading-large,
+.uk-heading-medium,
+.uk-heading-small,
+.uk-heading-xlarge,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Overpass", sans-serif !important;
 }
 
-*+.uk-h1, *+.uk-h2, *+.uk-h3, *+.uk-h4, *+.uk-h5, *+.uk-h6, *+.uk-heading-2xlarge, *+.uk-heading-large, *+.uk-heading-medium, *+.uk-heading-small, *+.uk-heading-xlarge, *+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
+* + .uk-h1,
+* + .uk-h2,
+* + .uk-h3,
+* + .uk-h4,
+* + .uk-h5,
+* + .uk-h6,
+* + .uk-heading-2xlarge,
+* + .uk-heading-large,
+* + .uk-heading-medium,
+* + .uk-heading-small,
+* + .uk-heading-xlarge,
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
   margin-top: 20px !important;
 }
 
-.divider{
+.divider {
   margin: 15px 0 15px 0 !important;
   border-top: 2px solid #e5e5e5 !important;
 }
 
-.active{
-  border-bottom: 3px solid #2DA6DC !important;
+.divider2 {
+  margin: 15px 0 15px 0 !important;
+  border-top: 2px solid #cccccc !important;
 }
 
-.uk-dotnav>*>:active{
-  background-color: #2DA6DC !important;
+.active {
+  border-bottom: 3px solid #2da6dc !important;
+}
+
+.uk-dotnav > * > :active {
+  background-color: #2da6dc !important;
   border-color: transparent;
 }
 
-.uk-dotnav>*>:hover{
-  background-color: #2DA6DC !important;
+.uk-dotnav > * > :hover {
+  background-color: #2da6dc !important;
   border-color: transparent;
 }
 
-.uk-dotnav>.uk-active>*{
-  background-color: #2DA6DC !important;
+.uk-dotnav > .uk-active > * {
+  background-color: #2da6dc !important;
   border-color: transparent;
 }
 
-.uk-dotnav>*>*{
-  border: 2px solid #2DA6DC !important;
+.uk-dotnav > * > * {
+  border: 2px solid #2da6dc !important;
   width: 12px;
   height: 12px;
 }
 
-.button-resize{
+.button-resize {
   border: 2px solid #949494 !important;
   font-weight: bold !important;
   padding: 4px 30px !important;
@@ -110,15 +197,15 @@ body {
   font-weight: bold;
 }
 
-.background-gray{
+.background-gray {
   background: #dfdfdf !important;
 }
 
-.border-radius-top{
+.border-radius-top {
   border-top-left-radius: 25px !important;
   border-top-right-radius: 25px !important;
 }
 
-.border-radius{
+.border-radius {
   border-radius: 25px !important;
 }

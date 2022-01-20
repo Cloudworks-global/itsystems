@@ -1,76 +1,60 @@
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react";
 
-import slider1 from '../../assets/slider1.jpg'
-import slider2 from '../../assets/slider2.jpg'
-import slider3 from '../../assets/slider3.jpg'
-import slider4 from '../../assets/slider4.jpg'
-import slider5 from '../../assets/slider5.jpg'
+import { BASE_URL } from "../../utils/url";
+
+import axios from "axios";
 
 export const ClientsHome = () => {
-    return (
-        <div className='uk-container uk-padding-large'>
+  const [data, setData] = useState([]);
 
-            <div className="uk-grid-small uk-child-width-expand@s uk-text-center uk-margin" uk-grid="true">
-                <div>
-                    <div className='uk-text-capitalize uk-text-large uk-text-normal uk-text-bold'>
-                         OUR CLIENTS
-                    </div>
-                </div>
-            </div> 
+  useEffect(async () => {
+    return await axios.get(BASE_URL + "/list-clients").then((response) => {
+      setData(response.data);
+    });
+  }, []);
 
-            <div className="uk-position-relative uk-visible-toggle uk-margin" uk-slider="true">
+  return (
+    <div className="uk-container uk-padding-large">
+      <div
+        className="uk-grid-small uk-child-width-expand@s uk-text-center uk-margin"
+        uk-grid="true"
+      >
+        <div>
+          <div className="uk-text-capitalize uk-text-large uk-text-normal uk-text-bold uk-margin-bottom">
+            OUR CLIENTS
+          </div>
+        </div>
+      </div>
 
-                <div className="uk-slider-container">
+      <div
+        className="uk-position-relative uk-visible-toggle uk-margin uk-margin-bottom"
+        uk-slider="finite: true; autoplay: true"
+      >
+        <div className="uk-slider-container">
+          <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-6@m uk-grid uk-text-center">
+            {data.map((data, index) => {
+              return (
+                <li key={index}>
+                  <div className="uk-panel">
+                    <img src={BASE_URL + `/clients/${data}`} alt={data} />
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-                <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
-                    <li>
-                        <div className="uk-panel">
-                            <img src={slider1} alt="" />
-                            <div className="uk-position-center uk-panel"><h1>1</h1></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="uk-panel">
-                            <img src={slider2} alt="" />
-                            <div className="uk-position-center uk-panel"><h1>2</h1></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="uk-panel">
-                            <img src={slider3} alt="" />
-                            <div className="uk-position-center uk-panel"><h1>3</h1></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="uk-panel">
-                            <img src={slider4} alt="" />
-                            <div className="uk-position-center uk-panel"><h1>4</h1></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="uk-panel">
-                            <img src={slider5} alt="" />
-                            <div className="uk-position-center uk-panel"><h1>5</h1></div>
-                        </div>
-                    </li>
-                    
-                   
-                </ul>
+        <div class="uk-hidden@s uk-light">
+            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
+        </div>
 
-                </div>
+        <div class="uk-visible@s">
+            <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"></a>
+            <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
+        </div>
 
-                <div className="uk-hidden@s uk-light">
-                    <Link className="uk-position-center-left uk-position-small" to="#" uk-slidenav-previous="true" uk-slider-item="previous"></Link>
-                    <Link className="uk-position-center-right uk-position-small" to="#" uk-slidenav-next="true" uk-slider-item="next"></Link>
-                </div>
-
-                <div className="uk-visible@s">
-                    <Link className="uk-position-center-left-out uk-position-small" to="#" uk-slidenav-previous="true" uk-slider-item="true; previous"></Link>
-                    <Link className="uk-position-center-right-out uk-position-small" to="#" uk-slidenav-next="true" uk-slider-item="true; next"></Link>
-                </div>
-
-            </div>
-
-        </div>      
-    )
-}
+      </div>
+    </div>
+  );
+};

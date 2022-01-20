@@ -7,6 +7,7 @@ import { Clients } from "../pages/Clients";
 import { Carrers } from "../pages/Carrers";
 import { Awards } from "../pages/Awards";
 import { Contact } from "../pages/Contact";
+import { ReviewsAwards } from "../pages/ReviewsAwards";
 
 export const AppRouter = () => {
 
@@ -19,6 +20,7 @@ export const AppRouter = () => {
       <Route path="/carrers" element={<Carrers />} />
       <Route path="/awards" element={<Awards />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/reviews-awards" element={<ReviewsAwards />} />
     </Routes>
   );
 };
