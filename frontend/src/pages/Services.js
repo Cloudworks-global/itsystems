@@ -7,13 +7,13 @@ import { RewiesServices } from "../components/services/RewiesServices";
 
 export const Services = () => {
   return (
-    <>
+    <div id="top">
       <HeaderServices />
       <TecnologyServices />
       <SolutionsServices />
       <ServiceServices />
       <ChooseServices />
       <RewiesServices />
-    </>
+    </div>
   );
 };

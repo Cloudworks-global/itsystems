@@ -19,7 +19,7 @@ export const HeaderReviews = () => {
         </div>
         <div>
           <div className="uk-card uk-card-body">
-            <img src={banner07} alt="" className="uk-margin" />
+            <img src={banner07} width={200} alt="" className="uk-margin" />
           </div>
         </div>
       </div>

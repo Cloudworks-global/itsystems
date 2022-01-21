@@ -6,12 +6,12 @@ import { HiringHome } from '../components/home/HiringHome'
 
 export const Home = () => {
     return (
-        <>
+        <div id="top">
             <CarouselHome />
             <OfferHome />
             <Capabilities />
             <ClientsHome />
             <HiringHome />
-        </>
+        </div>
     )
 }

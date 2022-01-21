@@ -27,40 +27,40 @@ export const SolutionsServices = () => {
             <div>
               <div className="uk-card uk-card-default border-radius">
                 <div className="uk-card-media-top">
-                  <img src={vec01} alt="" className="border-radius-top" />
+                  <img src={vec01} width={230} alt="" className="border-radius-top" style={{marginTop: '3rem'}} />
                 </div>
                 <div className="uk-card-body">
-                  <h3 className="uk-card-title">Full-stack developments</h3>
+                  <h3 className="uk-card-title uk-text-bold" style={{marginBottom: '2rem'}}>Full-stack developments</h3>
                 </div>
               </div>
             </div>
             <div>
               <div className="uk-card uk-card-default border-radius">
                 <div className="uk-card-media-top">
-                  <img src={vec02} alt="" className="border-radius-top" />
+                  <img src={vec02} width={230} alt="" className="border-radius-top" style={{marginTop: '3rem'}} />
                 </div>
                 <div className="uk-card-body">
-                  <h3 className="uk-card-title">SharePoint developments</h3>
+                  <h3 className="uk-card-title uk-text-bold" style={{marginBottom: '2rem'}}>SharePoint developments</h3>
                 </div>
               </div>
             </div>
             <div>
               <div className="uk-card uk-card-default border-radius">
                 <div className="uk-card-media-top">
-                  <img src={vec03} alt="" className="border-radius-top" />
+                  <img src={vec03} width={230} alt="" className="border-radius-top" style={{marginTop: '3rem'}} />
                 </div>
                 <div className="uk-card-body">
-                  <h3 className="uk-card-title">BizTalk developments</h3>
+                  <h3 className="uk-card-title uk-text-bold" style={{marginBottom: '2rem'}}>BizTalk developments</h3>
                 </div>
               </div>
             </div>
             <div>
               <div className="uk-card uk-card-default border-radius">
                 <div className="uk-card-media-top">
-                  <img src={vec04} alt="" className="border-radius-top" />
+                  <img src={vec04} width={230} alt="" className="border-radius-top" style={{marginTop: '3rem'}} />
                 </div>
                 <div className="uk-card-body">
-                  <h3 className="uk-card-title"></h3>
+                  <h3 className="uk-card-title uk-text-bold" style={{marginBottom: '2rem'}}></h3>
                 </div>
               </div>
             </div>

@@ -7,12 +7,12 @@ import { AwardAbout } from '../components/abouts/AwardAbout'
 
 export const About = () => {
     return (
-        <>
+        <div id="top">
             <HeaderAbout />
             <WordsAbout />
             <BannerAbout />
             <CardsAbout />
             <AwardAbout/>
-        </>
+        </div>
     )
 }

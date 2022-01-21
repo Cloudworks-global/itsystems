@@ -13,7 +13,7 @@ export const RewiesReview = () => {
               <div>
                 <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold">
                   REVIEWS
-                  <hr className="uk-divider divider"></hr>
+                  <hr className="uk-divider divider01"></hr>
                 </div>
                 <div className="uk-flex uk-flex-column uk-flex-center">
                   <div className="uk-card-header">
@@ -70,12 +70,13 @@ export const RewiesReview = () => {
                     </span>
                   </div>
                   <div className="uk-card-footer">
-                    <Link
+                    <a
                       className="uk-button uk-button-default button-resize"
-                      to="http://itsystemsinnova.com/services.html#hash"
+                      href="https://clutch.co/profile/itsystems?utm_source=widget&utm_medium=4&utm_campaign=widget&utm_content=stars#summary"
+                      target="_blank"
                     >
                       VIEW MORE
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

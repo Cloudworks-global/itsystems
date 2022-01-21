@@ -20,11 +20,11 @@ export const ServiceServices = () => {
                   <img src={service01} alt="" />
                 </div>
                 <div
-                  className="uk-grid-small uk-child-width-auto uk-margin-medium-top"
+                  className="uk-grid-small uk-child-width-auto uk-margin-medium-top uk-text-right"
                   uk-grid="true"
                 >
                   <div>
-                    <img src={service02} alt="" />
+                    <img src={service02} width={700} alt="" />
                   </div>
                 </div>
               </div>

@@ -1,3 +1,5 @@
+import { HashLink as Link } from "react-router-hash-link";
+
 import banner06 from "../../assets/banner06.png";
 
 export const HiringHome = () => {
@@ -6,7 +8,7 @@ export const HiringHome = () => {
       <div className="bg-blue-marine01">
         <div className="uk-container">
           <div className="uk-flex uk-flex-center uk-flex-middle">
-            <div className="uk-card uk-card-body uk-text-right">
+            <div className="uk-card uk-card-body uk-text-right uk-visible@m">
               <img src={banner06} width={300} alt="" className="uk-margin" />
             </div>
             <div className="uk-card uk-card-body uk-text-center">
@@ -16,9 +18,13 @@ export const HiringHome = () => {
               <h4 className="uk-padding-remove uk-margin-remove">
                 <span className="color-white">Join our team</span> <br />
               </h4>
-              <button className="uk-margin-small-top uk-button uk-button-default uk-button-pink">
+              <Link
+                smooth
+                to="/careers#top"
+                className="uk-margin-small-top uk-button uk-button-default uk-button-pink"
+              >
                 APPLY
-              </button>
+              </Link>
             </div>
           </div>
         </div>

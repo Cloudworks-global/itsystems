@@ -32,7 +32,7 @@ export const Navbar = () => {
               <NavLink to="/clients">CLIENTS</NavLink>
             </li> */}
             <li className={({isActive})=>(isActive ? "active" : "")}>
-              <NavLink to="/carrers">CAREERS</NavLink>
+              <NavLink to="/careers">CAREERS</NavLink>
             </li>
             {/* <li className={({isActive})=>(isActive ? "active" : "")}>
               <NavLink to="/awards">AWARDS</NavLink>

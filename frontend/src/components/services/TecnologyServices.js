@@ -37,7 +37,7 @@ export const TecnologyServices = () => {
               uk-slider="true"
             >
               <div className="uk-slider-container">
-                <div className="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center" uk-grid="true">
+                <div className="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-flex-middle uk-text-center" uk-grid="true">
                   
                   {data.map((data, index) => {
                     return (

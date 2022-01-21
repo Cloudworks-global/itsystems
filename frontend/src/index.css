@@ -13,6 +13,10 @@ body {
   border-top: 2px solid #a1a1a1 !important;
 }
 
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle{
+  min-height: 50px !important;
+}
+
 .bg-blue-marine {
   background: #1a1f2f !important;
 }
@@ -81,24 +85,24 @@ body {
 }
 
 .uk-button-pink {
-  background-color: #fd6c85;
+  background-color: #EA32A0;
   color: white;
   border-radius: 0.4rem;
-  border-color: #fd6c85;
+  border-color: #EA32A0;
 }
 
 .uk-button-pink:hover {
-  background-color: #fd6c85;
+  background-color: #EA32A0;
   color: white;
   border-radius: 0.4rem;
-  border-color: #fd6c85;
+  border-color: #EA32A0;
 }
 
 .uk-button-pink:focus {
-  background-color: #fd6c85;
+  background-color: #EA32A0;
   color: white;
   border-radius: 0.4rem;
-  border-color: #fd6c85;
+  border-color: #EA32A0;
 }
 
 .uk-grid-divider > :not(.uk-first-column)::before {
@@ -117,6 +121,7 @@ body {
   font-size: 18px !important;
   padding-top: 10px !important;
   padding-bottom: 5px !important;
+  border-radius: 0.8rem !important;
 }
 
 .padding-small {
@@ -243,7 +248,7 @@ h6 {
 }
 
 .background-gray {
-  background: #dfdfdf !important;
+  background: #EFEFEF !important;
 }
 
 .background-celest {

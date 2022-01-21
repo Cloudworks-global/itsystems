@@ -3,7 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 export const ChooseServices = () => {
   return (
     <>
-      <div className="uk-container">
+      <div className="uk-container uk-container-small">
         <div className="uk-container uk-padding">
           <div className="uk-grid-small uk-child-width-expand@s" uk-grid="true">
             <div>

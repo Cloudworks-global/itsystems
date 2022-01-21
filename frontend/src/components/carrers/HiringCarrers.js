@@ -5,7 +5,7 @@ export const HiringCarrers = () => {
   return (
     <>
       <div className="background-gray uk-padding-large">
-        <div className="uk-container">
+        <div className="uk-container uk-container-small">
           <div className="uk-container uk-padding">
             <div
               className="uk-grid-small uk-child-width-expand@s uk-text-center"

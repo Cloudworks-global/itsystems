@@ -3,8 +3,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 export const RewiesServices = () => {
   return (
     <>
-      <div className="uk-padding-large">
-        <div className="uk-container">
+      <div className="uk-padding">
+        <div className="uk-container uk-container-small">
           <div className="uk-container uk-padding">
             <div
               className="uk-grid-small uk-child-width-expand@s uk-text-center"
@@ -70,12 +70,13 @@ export const RewiesServices = () => {
                     </span>
                   </div>
                   <div className="uk-card-footer">
-                    <Link
+                    <a
+                      href="https://clutch.co/profile/itsystems?utm_source=widget&utm_medium=4&utm_campaign=widget&utm_content=stars#summary"
+                      target="_blank"
                       className="uk-button uk-button-default button-resize"
-                      to="http://itsystemsinnova.com/services.html#hash"
                     >
                       VIEW MORE
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
