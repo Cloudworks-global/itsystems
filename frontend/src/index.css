@@ -35,6 +35,47 @@ body {
   background: #76cec1 !important;
 }
 
+.bg-element01 {
+  background-color: white;
+  border: 1px solid #1a1f2f;
+  border-radius: 0.6rem;
+  color: #1a1f2f !important;
+  font-weight: bold;
+}
+
+.bg-element02 {
+  background-color: white;
+  border: 1px solid #1a1f2fb1;
+  border-radius: 0.6rem;
+  color: #1a1f2f !important;
+  font-weight: bold;
+}
+
+.bg-element03 {
+  background-color: white;
+  border: 1px solid #1a1f2f93;
+  border-radius: 0.6rem;
+  color: #1a1f2f !important;
+  font-weight: bold;
+}
+
+.bg-element04 {
+  background-color: white;
+  border: 1px solid #1a1f2f6d;
+  border-radius: 0.6rem;
+  color: #1a1f2f !important;
+  font-weight: bold;
+}
+
+.bg-element05 {
+  background-color: white;
+  border: 1px solid #1a1f2f48;
+  border-radius: 0.6rem;
+  color: #1a1f2f !important;
+  font-weight: bold;
+}
+
+
 .uk-button-pink {
   background-color: #fd6c85;
   color: white;
@@ -56,7 +97,7 @@ body {
   border-color: #fd6c85;
 }
 
-.uk-grid-divider>:not(.uk-first-column)::before {
+.uk-grid-divider > :not(.uk-first-column)::before {
   content: "";
   position: absolute;
   top: 0;
