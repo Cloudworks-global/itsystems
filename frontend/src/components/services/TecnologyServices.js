@@ -26,7 +26,7 @@ export const TecnologyServices = () => {
               uk-grid="true"
             >
               <div>
-                <div className="uk-text-capitalize uk-text-large uk-text-normal uk-text-bold">
+                <div className="uk-text-capitalize uk-padding-bottom uk-text-large uk-text-normal uk-text-bold">
                     TECHNOLOGIES
                 </div>
               </div>
@@ -37,48 +37,22 @@ export const TecnologyServices = () => {
               uk-slider="true"
             >
               <div className="uk-slider-container">
-                <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid uk-text-center">
+                <div className="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center" uk-grid="true">
+                  
                   {data.map((data, index) => {
                     return (
-                      <li key={index}>
-                        <div className="uk-panel">
-                          <img src={BASE_URL + `/technology/${data}`} alt={data} />
-                        </div>
-                      </li>
+                      <div key={index}>
+                          <div className="uk-card uk-card-body">
+                            <img src={BASE_URL + `/technology/${data}`} alt={data} />
+                          </div>
+                      </div>
                     );
                   })}
-                </ul>
+                  
+                </div>
               </div>
 
-              <div className="uk-hidden@s uk-light">
-                <Link
-                  className="uk-position-center-left uk-position-small"
-                  to="#"
-                  uk-slidenav-previous="true"
-                  uk-slider-item="previous"
-                ></Link>
-                <Link
-                  className="uk-position-center-right uk-position-small"
-                  to="#"
-                  uk-slidenav-next="true"
-                  uk-slider-item="next"
-                ></Link>
-              </div>
-
-              <div className="uk-visible@s">
-                <Link
-                  className="uk-position-center-left-out uk-position-small"
-                  to="#"
-                  uk-slidenav-previous="true"
-                  uk-slider-item="true; previous"
-                ></Link>
-                <Link
-                  className="uk-position-center-right-out uk-position-small"
-                  to="#"
-                  uk-slidenav-next="true"
-                  uk-slider-item="true; next"
-                ></Link>
-              </div>
+              
             </div>
           </div>
         </div>

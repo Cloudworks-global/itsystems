@@ -44,14 +44,14 @@ export const ClientsHome = () => {
           </ul>
         </div>
 
-        <div class="uk-hidden@s uk-light">
-            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
+        <div className="uk-hidden@s uk-light">
+            <a className="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"></a>
+            <a className="uk-position-center-right uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
         </div>
 
-        <div class="uk-visible@s">
-            <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"></a>
-            <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
+        <div className="uk-visible@s">
+            <a className="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"></a>
+            <a className="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
         </div>
 
       </div>

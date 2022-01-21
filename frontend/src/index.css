@@ -8,6 +8,11 @@ body {
   color: #ffffff !important;
 }
 
+.divider01 {
+  margin: 15px 0 15px 0 !important;
+  border-top: 2px solid #a1a1a1 !important;
+}
+
 .bg-blue-marine {
   background: #1a1f2f !important;
 }
@@ -74,7 +79,6 @@ body {
   color: #1a1f2f !important;
   font-weight: bold;
 }
-
 
 .uk-button-pink {
   background-color: #fd6c85;
@@ -240,6 +244,10 @@ h6 {
 
 .background-gray {
   background: #dfdfdf !important;
+}
+
+.background-celest {
+  background: #a0dffc !important;
 }
 
 .border-radius-top {

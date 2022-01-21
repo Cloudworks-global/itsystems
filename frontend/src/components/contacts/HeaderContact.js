@@ -1,8 +1,8 @@
-import banner06 from '../../assets/banner06.png'
+import contact01 from '../../assets/contact-02.png'
 
 export const HeaderContact = () => {
     return (
-        <div className="background-gray uk-padding-large">
+        <div className="background-celest uk-padding-large">
             <div className="uk-container">
                 <div className="uk-grid-small uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid="true">
                     <div>
@@ -14,7 +14,7 @@ export const HeaderContact = () => {
                     </div>
                     <div>
                         <div className="uk-card uk-card-body">
-                            <img src={banner06} alt="" className='uk-margin' />
+                            <img src={contact01} width={400} alt="" className='uk-margin' />
                         </div>
                     </div>
                 </div>

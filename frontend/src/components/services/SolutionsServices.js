@@ -16,14 +16,14 @@ export const SolutionsServices = () => {
               uk-grid="true"
             >
               <div>
-                <div className="uk-text-capitalize uk-margin-top uk-text-large uk-text-center uk-text-bold">
-                  SOLUTIONS FOR YOUR BUSINESS! <hr class="uk-divider divider2"></hr>
+                <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold">
+                  SOLUTIONS FOR YOUR BUSINESS! <hr className="uk-divider divider2"></hr>
                 </div>
               </div>
             </div>
           </div>
        
-          <div class="uk-child-width-expand@s uk-text-center uk-grid-match" uk-grid="true">
+          <div className="uk-child-width-expand@s uk-margin-bottom uk-text-center uk-grid-match" uk-grid="true">
             <div>
               <div className="uk-card uk-card-default border-radius">
                 <div className="uk-card-media-top">
@@ -60,7 +60,7 @@ export const SolutionsServices = () => {
                   <img src={vec04} alt="" className="border-radius-top" />
                 </div>
                 <div className="uk-card-body">
-                  <h3 className="uk-card-title">-</h3>
+                  <h3 className="uk-card-title"></h3>
                 </div>
               </div>
             </div>

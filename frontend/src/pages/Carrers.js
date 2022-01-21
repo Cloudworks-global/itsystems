@@ -7,7 +7,6 @@ export const Carrers = () => {
     <>
       <HeaderCarrers />
       <HiringCarrers />
-      <FormCarrers />
     </>
   );
 };

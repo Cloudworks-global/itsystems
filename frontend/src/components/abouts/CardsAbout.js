@@ -21,12 +21,12 @@ export const CardsAbout = () => {
 
                 <div className="uk-grid-medium uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center uk-grid-match" uk-grid="true">
                     <div>
-                        <div class="uk-card">
-                            <div class="uk-card-media-top">
+                        <div className="uk-card">
+                            <div className="uk-card-media-top">
                                 <img width="80" alt="" src={iconos06} ></img>
                             </div>
-                            <div class="uk-card-body">
-                                <h2 class="uk-card-title uk-text-bold">Technical Knowledge</h2>
+                            <div className="uk-card-body">
+                                <h2 className="uk-card-title uk-text-bold">Technical Knowledge</h2>
                                 <p>Staying updated with the latest technology
                                 trends is essential for ITSystems. All of our
                                 developers should also remain asexible to
@@ -36,12 +36,12 @@ export const CardsAbout = () => {
                         </div>
                     </div>
                     <div>
-                        <div class="uk-card">
-                            <div class="uk-card-media-top">
+                        <div className="uk-card">
+                            <div className="uk-card-media-top">
                                 <img width="70" alt="" src={iconos07}></img>
                             </div>
-                            <div class="uk-card-body">
-                                <h2 class="uk-card-title uk-text-bold">Problem Solving Skills</h2>
+                            <div className="uk-card-body">
+                                <h2 className="uk-card-title uk-text-bold">Problem Solving Skills</h2>
                                 <p>We must be aware of the fact that the main
                                 thesis of software development is "solving
                                 some kind of problem". Software
@@ -55,12 +55,12 @@ export const CardsAbout = () => {
 
                 <div className="uk-grid-medium uk-child-width-1-1@s uk-child-width-1-3@m uk-text-center uk-grid-match" uk-grid="true">
                     <div>
-                        <div class="uk-card">
-                            <div class="uk-card-media-top">
+                        <div className="uk-card">
+                            <div className="uk-card-media-top">
                                 <img width="80" alt="" src={iconos08} ></img>
                             </div>
-                            <div class="uk-card-body">
-                                <h2 class="uk-card-title uk-text-bold">Business Skills</h2>
+                            <div className="uk-card-body">
+                                <h2 className="uk-card-title uk-text-bold">Business Skills</h2>
                                 <p>Any skilled software developer can develop
                                 software applications, but a great software
                                 developer is the one who apart from mastering
@@ -72,12 +72,12 @@ export const CardsAbout = () => {
                     </div>
 
                     <div>
-                        <div class="uk-card">
-                            <div class="uk-card-media-top">
+                        <div className="uk-card">
+                            <div className="uk-card-media-top">
                                 <img width="80" alt="" src={iconos09} ></img>
                             </div>
-                            <div class="uk-card-body">
-                                <h2 class="uk-card-title uk-text-bold">Zeal to Keep Learning</h2>
+                            <div className="uk-card-body">
+                                <h2 className="uk-card-title uk-text-bold">Zeal to Keep Learning</h2>
                                 <p>Collaboration and support is critical to how
                                 we develop as a team and it is the backbone
                                 of what makes us great. It does not matter if
@@ -88,12 +88,12 @@ export const CardsAbout = () => {
                     </div>
 
                     <div>
-                        <div class="uk-card">
-                            <div class="uk-card-media-top">
+                        <div className="uk-card">
+                            <div className="uk-card-media-top">
                                 <img width="80" alt="" src={iconos10} ></img>
                             </div>
-                            <div class="uk-card-body">
-                                <h2 class="uk-card-title uk-text-bold">Communication Skills</h2>
+                            <div className="uk-card-body">
+                                <h2 className="uk-card-title uk-text-bold">Communication Skills</h2>
                                 <p>It is very important for ITSystems that all of
                                 our employee are able to explain the information
                                 clearly to their managers, other

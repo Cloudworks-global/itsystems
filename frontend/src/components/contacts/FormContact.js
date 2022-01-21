@@ -3,16 +3,30 @@ import axios from "axios";
 export const FormContact = () => {
     return (
         <>
+      
+            <div className="uk-container uk-container-small uk-padding">
+                <div
+                className="uk-grid-small uk-child-width-expand@s"
+                uk-grid="true"
+                >
+                <div>
+                    <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold">
+                        FEEL FREE TO WRITE TO US <hr className="uk-divider divider2"></hr>
+                    </div>
+                </div>
+                </div>
+            </div>
+          
           <div className="uk-container uk-container-xsmall">
             <div className="uk-container uk-padding">
-            <form class="uk-form-stacked">
-                <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">
+            <form className="uk-form-stacked">
+                <div className="uk-margin">
+                <label className="uk-form-label" for="form-stacked-text">
                     Name
                 </label>
-                <div class="uk-form-controls">
+                <div className="uk-form-controls">
                     <input
-                    class="uk-input"
+                    className="uk-input"
                     id="name"
                     type="text"
                     placeholder="Name..."
@@ -21,13 +35,13 @@ export const FormContact = () => {
                 </div>
                 </div>
 
-                <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">
+                <div className="uk-margin">
+                <label className="uk-form-label" for="form-stacked-text">
                     Email
                 </label>
-                <div class="uk-form-controls">
+                <div className="uk-form-controls">
                     <input
-                    class="uk-input"
+                    className="uk-input"
                     id="email"
                     type="text"
                     placeholder="Email..."
@@ -36,13 +50,13 @@ export const FormContact = () => {
                 </div>
                 </div>
 
-                <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">
+                <div className="uk-margin">
+                <label className="uk-form-label" for="form-stacked-text">
                     Phone
                 </label>
-                <div class="uk-form-controls">
+                <div className="uk-form-controls">
                     <input
-                    class="uk-input"
+                    className="uk-input"
                     id="phone"
                     type="text"
                     placeholder="Phone..."
@@ -51,13 +65,13 @@ export const FormContact = () => {
                 </div>
                 </div>
 
-                <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">
+                <div className="uk-margin">
+                <label className="uk-form-label" for="form-stacked-text">
                     Messsage
                 </label>
-                <div class="uk-form-controls">
+                <div className="uk-form-controls">
                     <input
-                    class="uk-input"
+                    className="uk-input"
                     id="messsage"
                     type="text"
                     placeholder="Messsage..."
@@ -68,7 +82,7 @@ export const FormContact = () => {
 
                 <div className="uk-margin">
                     <div className="uk-flex uk-flex-center@m uk-flex-right@l">
-                        <button class="uk-button uk-button-default uk-button-pink">SEND</button>
+                        <button className="uk-button uk-button-default uk-button-pink">SEND</button>
                     </div>
                 </div>
             </form>

@@ -7,7 +7,7 @@ import "./Navbar.css";
 export const Navbar = () => {
   return (
     <div className="uk-container uk-container-large">
-      <nav className="uk-navbar-container uk-navbar-transparent" uk-navbar="true">
+      <nav className="uk-navbar-container uk-navbar-transparent uk-margin-bottom" uk-navbar="true">
         <div className="uk-navbar-left">
           <Link to="#" className="uk-logo">
             <img className="uk-responsive-width" style={{
@@ -32,7 +32,7 @@ export const Navbar = () => {
               <NavLink to="/clients">CLIENTS</NavLink>
             </li> */}
             <li className={({isActive})=>(isActive ? "active" : "")}>
-              <NavLink to="/carrers">CARRERS</NavLink>
+              <NavLink to="/carrers">CAREERS</NavLink>
             </li>
             {/* <li className={({isActive})=>(isActive ? "active" : "")}>
               <NavLink to="/awards">AWARDS</NavLink>
@@ -45,19 +45,19 @@ export const Navbar = () => {
         
         <div className="uk-navbar-right uk-hidden@m">
           <li>
-            <span class="uk-margin-small-right" uk-icon="menu" uk-toggle="target: #offcanvas-usage"></span>
+            <span className="uk-margin-small-right" uk-icon="menu" uk-toggle="target: #offcanvas-usage"></span>
           </li>
         </div>
         
 
         <div id="offcanvas-usage" uk-offcanvas='true'>
-            <div class="uk-offcanvas-bar">
+            <div className="uk-offcanvas-bar">
 
-                <button class="uk-offcanvas-close" type="button" uk-close='true'></button>
+                <button className="uk-offcanvas-close" type="button" uk-close='true'></button>
 
                 <h3>Menu</h3>
 
-                <ul class="uk-list">
+                <ul className="uk-list">
                   <li className={({isActive})=>(isActive ? "active" : "")}>
                     <NavLink to="/">HOME</NavLink>
                   </li>

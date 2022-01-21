@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FormCarrers } from "./FormCarrers";
 
 export const HiringCarrers = () => {
   return (
@@ -13,54 +14,65 @@ export const HiringCarrers = () => {
               <div>
                 <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold">
                   WE ARE HIRING!
-                  <hr className="uk-divider divider"></hr>
+                  <hr className="uk-divider divider01"></hr>
                 </div>
                 <div className="uk-margin-medium-top">
-                  <p className="uk-text-meta">Please attach your resume.</p>
+                  <p className="uk-text-small uk-text-bold">Please attach your resume.</p>
                 </div>
               </div>
             </div>
 
-            <div
-              className="uk-grid-small uk-child-width-expand@s uk-margin-remove-vertical"
-              uk-grid="true"
-            >
-              <div>
-                <div className="uk-text-capitalize bg-blue-marine color-white uk-margin-top card-green uk-text-lead uk-text-center">
+            <ul uk-accordion="true">
+              <li className=" uk-openuk-text-capitalize bg-blue-marine color-white uk-margin-top card-green uk-text-lead">
+                <a
+                  class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
+                  href="#"
+                >
                   .NET Developer Junior
+                </a>
+
+                <div class="uk-accordion-content">
+                  <FormCarrers />
                 </div>
-              </div>
-            </div>
-            <div
-              className="uk-grid-small uk-child-width-expand@s uk-margin-remove-vertical"
-              uk-grid="true"
-            >
-              <div>
-                <div className="uk-text-capitalize bg-blue-marine01 color-white uk-margin-top card-green uk-text-lead uk-text-center">
+              </li>
+              <li className=" uk-openuk-text-capitalize bg-blue-marine01 color-white uk-margin-top card-green uk-text-lead">
+                <a
+                  class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
+                  href="#"
+                >
                   .NET Developer Senior
+                </a>
+
+                <div class="uk-accordion-content">
+                  <FormCarrers />
                 </div>
-              </div>
-            </div>
-            <div
-              className="uk-grid-small uk-child-width-expand@s uk-margin-remove-vertical"
-              uk-grid="true"
-            >
-              <div>
-                <div className="uk-text-capitalize bg-blue-marine02 color-white uk-margin-top card-green uk-text-lead uk-text-center">
+              </li>
+              <li className=" uk-openuk-text-capitalize bg-blue-marine02 color-white uk-margin-top card-green uk-text-lead">
+                <a
+                  class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
+                  href="#"
+                >
                   SharePoint Developer
+                </a>
+
+                <div class="uk-accordion-content">
+                  <FormCarrers />
                 </div>
-              </div>
-            </div>
-            <div
-              className="uk-grid-small uk-child-width-expand@s uk-margin-remove-vertical"
-              uk-grid="true"
-            >
-              <div>
-                <div className="uk-text-capitalize bg-blue-marine03 color-white uk-margin-top card-green uk-text-lead uk-text-center">
+              </li>
+              <li className=" uk-openuk-text-capitalize bg-blue-marine03 color-white uk-margin-top card-green uk-text-lead">
+                <a
+                  class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
+                  href="#"
+                >
                   Tester
+                </a>
+
+                <div class="uk-accordion-content">
+                  <FormCarrers />
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
+
           </div>
         </div>
       </div>

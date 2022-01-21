@@ -15,41 +15,41 @@ export const RewiesServices = () => {
                   REVIEWS
                   <hr className="uk-divider divider"></hr>
                 </div>
-                <div class="uk-flex uk-flex-column uk-flex-center">
-                  <div class="uk-card-header">
-                    <div class="uk-grid-small uk-flex-middle" uk-grid>
-                      <div class="uk-width-auto"></div>
-                      <div class="uk-width-expand bg-blue-marine-min">
-                        <h3 class="uk-card-title uk-margin-remove-bottom color-white uk-padding-small">
+                <div className="uk-flex uk-flex-column uk-flex-center">
+                  <div className="uk-card-header">
+                    <div className="uk-grid-small uk-flex-middle" uk-grid>
+                      <div className="uk-width-auto"></div>
+                      <div className="uk-width-expand bg-blue-marine-min">
+                        <h3 className="uk-card-title uk-margin-remove-bottom color-white uk-padding-small">
                           ITSystems Reviews
                         </h3>
                       </div>
                     </div>
                   </div>
-                  <div class="uk-card-body uk-margin-remove uk-padding-small">
+                  <div className="uk-card-body uk-margin-remove uk-padding-small">
                     <p>
                       <span
-                        class="uk-margin-small-right"
+                        className="uk-margin-small-right"
                         uk-icon="star"
                         style={{ color: "red" }}
                       ></span>
                       <span
-                        class="uk-margin-small-right"
+                        className="uk-margin-small-right"
                         uk-icon="star"
                         style={{ color: "red" }}
                       ></span>
                       <span
-                        class="uk-margin-small-right"
+                        className="uk-margin-small-right"
                         uk-icon="star"
                         style={{ color: "red" }}
                       ></span>
                       <span
-                        class="uk-margin-small-right"
+                        className="uk-margin-small-right"
                         uk-icon="star"
                         style={{ color: "red" }}
                       ></span>
                       <span
-                        class="uk-margin-small-right"
+                        className="uk-margin-small-right"
                         uk-icon="star"
                         style={{ color: "red" }}
                       ></span>
@@ -69,7 +69,7 @@ export const RewiesServices = () => {
                       " ITSystems is a reliable team "
                     </span>
                   </div>
-                  <div class="uk-card-footer">
+                  <div className="uk-card-footer">
                     <Link
                       className="uk-button uk-button-default button-resize"
                       to="http://itsystemsinnova.com/services.html#hash"

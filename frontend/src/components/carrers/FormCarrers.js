@@ -5,14 +5,14 @@ export const FormCarrers = () => {
     <>
       <div className="uk-container uk-container-xsmall">
         <div className="uk-container uk-padding">
-          <form class="uk-form-stacked">
-            <div class="uk-margin">
-              <label class="uk-form-label" for="form-stacked-text">
+          <form className="uk-form-stacked">
+            <div className="uk-margin">
+              <label className="uk-form-label color-white uk-text-bold" for="form-stacked-text">
                 Name
               </label>
-              <div class="uk-form-controls">
+              <div className="uk-form-controls">
                 <input
-                  class="uk-input"
+                  className="uk-input"
                   id="name"
                   type="text"
                   placeholder="Name..."
@@ -21,13 +21,13 @@ export const FormCarrers = () => {
               </div>
             </div>
 
-            <div class="uk-margin">
-              <label class="uk-form-label" for="form-stacked-text">
+            <div className="uk-margin">
+              <label className="uk-form-label color-white uk-text-bold" for="form-stacked-text">
                 Email
               </label>
-              <div class="uk-form-controls">
+              <div className="uk-form-controls">
                 <input
-                  class="uk-input"
+                  className="uk-input"
                   id="email"
                   type="text"
                   placeholder="Email..."
@@ -36,13 +36,13 @@ export const FormCarrers = () => {
               </div>
             </div>
 
-            <div class="uk-margin">
-              <label class="uk-form-label" for="form-stacked-text">
+            <div className="uk-margin">
+              <label className="uk-form-label color-white uk-text-bold" for="form-stacked-text">
                 Phone
               </label>
-              <div class="uk-form-controls">
+              <div className="uk-form-controls">
                 <input
-                  class="uk-input"
+                  className="uk-input"
                   id="phone"
                   type="text"
                   placeholder="Phone..."
@@ -51,13 +51,13 @@ export const FormCarrers = () => {
               </div>
             </div>
 
-            <div class="uk-margin">
-              <label class="uk-form-label" for="form-stacked-text">
+            <div className="uk-margin">
+              <label className="uk-form-label color-white uk-text-bold" for="form-stacked-text">
                 Messsage
               </label>
-              <div class="uk-form-controls">
+              <div className="uk-form-controls">
                 <input
-                  class="uk-input"
+                  className="uk-input"
                   id="messsage"
                   type="text"
                   placeholder="Messsage..."
@@ -68,8 +68,8 @@ export const FormCarrers = () => {
 
             <div className="uk-margin">
                 <div className="uk-flex uk-flex-center@m uk-flex-right@l">
-                    <button class="uk-button uk-button-default uk-margin-right">UPLOAD CV</button>
-                    <button class="uk-button uk-button-default uk-button-pink">SEND</button>
+                    <button className="uk-button uk-button-default uk-margin-right color-white uk-text-bold">UPLOAD CV</button>
+                    <button className="uk-button uk-button-default uk-button-pink uk-text-bold">SEND</button>
                 </div>
             </div>
           </form>
