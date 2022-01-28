@@ -33,10 +33,10 @@ export const AwardsReview = () => {
           </div>
 
           <div
-            class="uk-grid-collapse uk-child-width-expand@s uk-flex uk-flex-center uk-flex-middle"
+            class="uk-grid-collapse uk-flex uk-flex-center uk-flex-middle"
             uk-grid="true"
           >
-            <div>
+            <div className="uk-width-1-3@m">
               <div class="uk-padding uk-light uk-visible@m uk-text-center">
                 <img
                   src={banner01}
@@ -46,7 +46,7 @@ export const AwardsReview = () => {
                 />
               </div>
             </div>
-            <div>
+            <div className="uk-width-expand@m">
               <p>
                 Since 2010, ITSystems has made its mark here in Montevideo,
                 Uruguay for its top-notch software development services. We are
@@ -112,10 +112,10 @@ export const AwardsReview = () => {
           <hr className="uk-divider divider01"></hr>
 
           <div
-            class="uk-grid-collapse uk-child-width-expand@s uk-flex uk-flex-center uk-flex-middle"
+            class="uk-grid-collapse uk-flex uk-flex-center uk-flex-middle"
             uk-grid="true"
           >
-            <div>
+            <div className="uk-width-expand@m">
               <p>
                 Outsourcing software development isn’t always easy. Whether you’re
                 a startup looking to further develop a prototype or an enterprise
@@ -163,7 +163,7 @@ export const AwardsReview = () => {
                 any traditional notion of a vendor-client relationship.
               </p>
             </div>
-            <div>
+            <div className="uk-width-1-3@m">
               <div class="uk-padding uk-light uk-visible@m uk-text-center">
                 <img
                   src={banner02}

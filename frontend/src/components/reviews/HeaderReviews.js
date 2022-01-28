@@ -2,7 +2,7 @@ import banner07 from "../../assets/banner07.png";
 
 export const HeaderReviews = () => {
   return (
-    <div className="uk-container">
+    <div className="uk-container uk-container-small">
       <div
         className="uk-grid-small uk-grid-match uk-flex uk-flex-middle uk-child-width-expand@s uk-text-center uk-padding"
         uk-grid="true"
