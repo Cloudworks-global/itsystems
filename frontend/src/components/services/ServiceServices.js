@@ -20,9 +20,19 @@ export const ServiceServices = () => {
                   <img src={service01} alt="" />
                 </div>
                 <div
-                  className="uk-grid-small uk-child-width-auto uk-margin-medium-top uk-text-right"
+                  className="uk-grid-small uk-child-width-1-1@s uk-child-width-expand@m uk-margin-medium-top uk-text-center uk-flex uk-flex-middle"
                   uk-grid="true"
                 >
+                  <div>
+                    <h1 className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold uk-raleway uk-margin-remove">BEST PRACTICES <br/> PROJETC ROADMAP</h1>
+                    <ul className="uk-list uk-list-collapse uk-text-meta">
+                      <li>Complementary Assessment</li>
+                      <li>Senior developers</li>
+                      <li>Secure Design Logic</li>
+                      <li>Proof of Concepto</li>
+                      <li className="uk-text-bold">Cost effective on-time / on-budget</li>
+                    </ul>
+                  </div>
                   <div>
                     <img src={service02} width={700} alt="" />
                   </div>

@@ -1,7 +1,24 @@
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Titillium Web', sans-serif; 
+*/
+
 body {
-  font-family: "Overpass", sans-serif !important;
+  font-family: 'Titillium Web', sans-serif !important;
   color: #1a1f2f !important;
   font-weight: 400 !important;
+}
+
+.uk-navbar-item, .uk-navbar-nav > li > a{
+  font-family: 'Titillium Web', sans-serif !important;
+}
+
+.uk-card-title, .uk-article-title{
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.uk-raleway{
+  font-family: 'Raleway', sans-serif !important;
 }
 
 .color-white {
@@ -147,6 +164,10 @@ body {
 
 .font-1 {
   font-size: 1rem !important;
+}
+
+.font-2 {
+  font-size: 0.8rem !important;
 }
 
 .uk-navbar-item,

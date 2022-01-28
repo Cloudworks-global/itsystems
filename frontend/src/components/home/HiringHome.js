@@ -13,7 +13,7 @@ export const HiringHome = () => {
             </div>
             <div className="uk-card uk-card-body uk-text-center">
               <h2 className="uk-margin-remove uk-padding-remove blue-marine uk-text-bold uk-margin-small">
-                <span className="color-white">WE ARE HIRING!</span> <br />
+                <span className="color-white uk-raleway">WE ARE HIRING!</span> <br />
               </h2>
               <h4 className="uk-padding-remove uk-margin-remove">
                 <span className="color-white">Join our team</span> <br />

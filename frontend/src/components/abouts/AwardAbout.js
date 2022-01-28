@@ -10,7 +10,7 @@ export const AwardAbout = () => {
           <div className="uk-flex uk-flex-center uk-flex-middle">
             <div className="uk-card uk-card-body uk-text-center uk-margin-large-top">
               <h3 className="blue-marine uk-text-bold uk-margin-small">
-                <span className="color-white">
+                <span className="color-white uk-raleway">
                   OUR CLIENTS REVIEWS AND AWARDS
                 </span>{" "}
                 <br />
@@ -22,9 +22,10 @@ export const AwardAbout = () => {
               >
                 VIEW MORE
               </Link>
-
+              <br/>
+              <br/>
               <div className="uk-card uk-card-body uk-margin-remove uk-padding-remove">
-                <img src={rate} alt="" className="uk-margin-remove" />
+                <img src={rate} width={'55%'} alt="" className="uk-margin-remove" />
               </div>
             </div>
           </div>

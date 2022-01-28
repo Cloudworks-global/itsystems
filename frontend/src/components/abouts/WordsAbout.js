@@ -8,16 +8,16 @@ import iconos08 from '../../assets/ultimo-08.png'
 export const WordsAbout = () => {
     return (
         <>
-            <div className='uk-container uk-padding'>
+            <div className='uk-container uk-container-small uk-padding'>
 
                 <div className="uk-grid-small uk-child-width-expand@s" uk-grid="true">
                     <div>
-                        <div className='uk-text-capitalize uk-text-large uk-text-center uk-text-bold'>
+                        <div className='uk-text-capitalize uk-text-large uk-text-center uk-text-bold uk-raleway'>
                             A FEW WORDS ABOUT US
                             <hr className="uk-divider divider"></hr>
                         </div>
                         <div className="uk-margin-medium-top">
-                            <p>Andres Barreiro and Marcelo Bareberena cofounded ITSystems in 2010.</p>
+                            <p>Andres Barreiro and Marcelo Barberena cofounded ITSystems in 2010.</p>
                             
                             <p>ITSystems is an IT service company that focuses on Microsoft products, and has a deep knowledge of SharePoint, BizTalk, and custom
                             .NET developments</p>
@@ -39,7 +39,7 @@ export const WordsAbout = () => {
                         
                             <img width="80" alt="" src={iconos03}/>
                         
-                            <p className="uk-text-large uk-text-bold font-1">Customised,
+                            <p className="uk-text-large uk-text-bold font-2 uk-text-center">Customised,
                             effective
                             and efficient
                             service</p>
@@ -50,7 +50,7 @@ export const WordsAbout = () => {
 
                             <img width="80" alt="" src={iconos04}/>
 
-                            <p className="uk-text-large uk-text-bold font-1">
+                            <p className="uk-text-large uk-text-bold font-2 uk-text-center">
                             On going
                             staff training
                             </p>
@@ -61,7 +61,7 @@ export const WordsAbout = () => {
 
                             <img width="80" alt="" src={iconos05}/>
 
-                            <p className="uk-text-large uk-text-bold font-1">
+                            <p className="uk-text-large uk-text-bold font-2 uk-text-center">
                             Edge
                             technology
                             </p>
@@ -72,7 +72,7 @@ export const WordsAbout = () => {
 
                             <img width="80" alt="" src={iconos06}/>
 
-                            <p className="uk-text-large uk-text-bold font-1">
+                            <p className="uk-text-large uk-text-bold font-2 uk-text-center">
                             On going
                             improvement
                             of process
@@ -83,7 +83,7 @@ export const WordsAbout = () => {
                         <div className="uk-card uk-card-default bg-element01 uk-text-center color-white uk-card-body">
                             <img width="80" alt="" src={iconos07}/>
 
-                            <p className="uk-text-large uk-text-bold font-1">
+                            <p className="uk-text-large uk-text-bold font-2 uk-text-center">
                             Quality and
                             high-added
                             value solutions
@@ -93,7 +93,7 @@ export const WordsAbout = () => {
                     <div>
                         <div className="uk-card uk-card-default bg-element01 uk-text-center color-white uk-card-body">
                             <img width="80" alt="" src={iconos08}/>
-                            <p className="uk-text-large uk-text-bold font-1">
+                            <p className="uk-text-large uk-text-bold font-2 uk-text-center">
                             Know - How
                             and experience
                             in each

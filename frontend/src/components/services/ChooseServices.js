@@ -7,7 +7,7 @@ export const ChooseServices = () => {
         <div className="uk-container uk-padding">
           <div className="uk-grid-small uk-child-width-expand@s" uk-grid="true">
             <div>
-              <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold">
+              <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold uk-raleway">
                 WHY CHOOSE OUR SERVICES
                 <hr className="uk-divider divider"></hr>
               </div>

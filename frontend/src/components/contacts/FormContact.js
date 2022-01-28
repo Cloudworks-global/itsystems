@@ -10,7 +10,7 @@ export const FormContact = () => {
                 uk-grid="true"
                 >
                 <div>
-                    <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold">
+                    <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold uk-raleway">
                         FEEL FREE TO WRITE TO US <hr className="uk-divider divider2"></hr>
                     </div>
                 </div>
