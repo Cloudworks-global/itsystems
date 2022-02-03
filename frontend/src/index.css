@@ -9,6 +9,11 @@ body {
   font-weight: 400 !important;
 }
 
+.uk-form-label{
+  font-family: 'Titillium Web', sans-serif !important;
+  font-weight: bold;
+}
+
 .uk-navbar-item, .uk-navbar-nav > li > a{
   font-family: 'Titillium Web', sans-serif !important;
 }
@@ -164,6 +169,10 @@ body {
 
 .font-5 {
   font-size: 5rem !important;
+}
+
+.font-4{
+  font-size: 3.8rem !important;
 }
 
 .font-1 {

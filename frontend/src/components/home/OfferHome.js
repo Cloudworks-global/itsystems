@@ -41,7 +41,7 @@ export const OfferHome = () => {
                     <div className="uk-card uk-card-body">
                         <article className="uk-article">
 
-                            <img width="70" alt="" src={iconos12}></img>
+                            <img width="80" alt="" src={iconos12}></img>
 
                             <h1 className="uk-article-title">Customer Prioritization</h1>
 
@@ -75,7 +75,7 @@ export const OfferHome = () => {
                     <div className="uk-card uk-card-body">
                         <article className="uk-article">
 
-                            <img width="100" alt="" src={iconos14}></img>
+                            <img width="80" alt="" src={iconos14}></img>
 
                             <h1 className="uk-article-title">Stronger Together</h1>
 

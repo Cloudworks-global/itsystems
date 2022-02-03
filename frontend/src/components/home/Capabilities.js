@@ -16,14 +16,14 @@ export const Capabilities = () => {
                 </div>
             </div>
 
-            <div className="uk-child-width-expand@s uk-text-center uk-grid-match" uk-grid="true">
+            <div className="uk-child-width-expand@s uk-grid-match uk-text-center uk-flex uk-flex-middle" uk-grid="true">
                     <div>
                         <div className="uk-card uk-card-default border-radius">
                             <div className="uk-card-media-top">
                                 <img src={card01} alt="" className='border-radius-top' />
                             </div>
                             <div className="uk-card-body uk-padding-large">
-                                <h3 className="uk-card-title"><b>We offer expertise</b></h3>
+                                <h3 className="uk-card-title uk-margin-top"><b>We offer expertise</b></h3>
                                 <p>In developing systems by using
                                     Microsoft technology, especially
                                     .Net custom developments,
@@ -37,7 +37,7 @@ export const Capabilities = () => {
                                 <img src={card02} alt="" className='border-radius-top' />
                             </div>
                             <div className="uk-card-body uk-padding-large">
-                                <h3 className="uk-card-title"><b>Experience and knowledge</b></h3>
+                                <h3 className="uk-card-title uk-margin-large-top"><b>Experience and knowledge</b></h3>
                                 <p>We provide experience and
                                 knowledge in each of our services.
                                 We have trained and certified
