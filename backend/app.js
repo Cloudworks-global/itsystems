@@ -7,8 +7,11 @@ const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
 const nodemailer = require("nodemailer");
+const Filter = require("node-image-filter");
 
 const app = express();
+
+const pool = require("./config/database");
 
 app.use(morgan("tiny"));
 app.use(cors());
@@ -16,30 +19,35 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use(
+  express.static(path.resolve(__dirname, "./public"), {
+    extensions: ["html", "htm"],
+  })
+);
 
-// app.use(
-//   express.static(path.resolve(__dirname, "./build"), {
-//     extensions: ["html", "htm"],
-//   })
-// );
+// Pages
+app.get("/login", (req, res) => {
+  res.sendFile(__dirname + "/login.html");
+});
 
-// app.use(express.static("clients"));
+app.get("/dashboard", (req, res) => {
+  res.sendFile(__dirname + "/dashboard.html");
+});
 
-// app.get("/list-clients", async (req, res) => {
-//   try {
-//     await fs.readdir(__dirname + "/clients/", function (err, archivos) {
-//       if (err) {
-//         onError(err);
-//         return;
-//       }
-
-//       res.sendFile(__dirname + "/clients/" + `${archivos[1]}`);
-//     });
-//   } catch (error) {
-//     res.send("fail");
-//   }
-// });
+// EndPoint
+app.post("/login", async (req, res) => {
+  const { clave } = req.body;
+  console.log(clave);
+  const results = await pool.query(
+    "SELECT COUNT(*) AS cantidad FROM users WHERE clave = ?",
+    [clave]
+  );
+  if (results[0].cantidad == 0) {
+    res.send("null");
+  } else {
+    res.send("ok");
+  }
+});
 
 app.get("/list-clients", async (req, res) => {
   try {
@@ -52,21 +60,24 @@ app.get("/list-clients", async (req, res) => {
       res.json(archivos);
     });
   } catch (error) {
-    res.send("fail");
+    res.sendFile(path.join(__dirname, '/public/fail.html'));
   }
 });
 
 app.get("/list-technology", async (req, res) => {
   try {
-    await fs.readdir(__dirname + "/public/technology/", function (err, archivos) {
-      if (err) {
-        onError(err);
-        return;
+    await fs.readdir(
+      __dirname + "/public/technology/",
+      function (err, archivos) {
+        if (err) {
+          onError(err);
+          return;
+        }
+        res.json(archivos);
       }
-      res.json(archivos);
-    });
+    );
   } catch (error) {
-    res.send("fail");
+    res.sendFile(path.join(__dirname, '/public/fail.html'));
   }
 });
 
@@ -85,15 +96,21 @@ const storageTechnology = multer.diskStorage({
 
 var uploadTechnology = multer({ storage: storageTechnology });
 
-app.post("/technology", uploadTechnology.array("file"), async (req, res) => {
-  const arrayfiles = req.files;
-  console.log(arrayfiles);
-  try {
-    res.send("success");
-  } catch (error) {
-    res.send("fail");
+app.post(
+  "/technology",
+  uploadTechnology.array("file-technology"),
+  async (req, res) => {
+    const arrayfiles = req.files;
+    try {
+      Filter.render(arrayfiles[0].path, Filter.preset.grayscale, function (result) {
+        result.data.pipe(fs.createWriteStream(arrayfiles[0].destination+arrayfiles[0].filename));
+        res.sendFile(path.join(__dirname, '/public/success.html'));
+      });
+    } catch (error) {
+      res.sendFile(path.join(__dirname, '/public/fail.html'));
+    }
   }
-});
+);
 
 const storageClients = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -110,13 +127,15 @@ const storageClients = multer.diskStorage({
 
 var uploadClients = multer({ storage: storageClients });
 
-app.post("/clients", uploadClients.array("file"), async (req, res) => {
+app.post("/clients", uploadClients.array("file-clients"), async (req, res) => {
   const arrayfiles = req.files;
-  console.log(arrayfiles);
   try {
-    res.send("success");
+    Filter.render(arrayfiles[0].path, Filter.preset.grayscale, function (result) {
+      result.data.pipe(fs.createWriteStream(arrayfiles[0].destination+arrayfiles[0].filename));
+      res.sendFile(path.join(__dirname, '/public/success.html'));
+    });
   } catch (error) {
-    res.send("fail");
+    res.sendFile(path.join(__dirname, '/public/fail.html'));
   }
 });
 
@@ -163,9 +182,9 @@ app.post("/email-cv", uploadCv.array("cv"), async (req, res) => {
       ],
     });
 
-    res.send("success");
+    res.sendFile(path.join(__dirname, '/public/success.html'));
   } catch (error) {
-    res.send("fail");
+    res.sendFile(path.join(__dirname, '/public/fail.html'));
   }
 });
 
@@ -191,7 +210,7 @@ app.post("/email", async (req, res) => {
 
     res.send("Message sent: %s", info.messageId);
   } catch (error) {
-    res.send("fail");
+    res.sendFile(path.join(__dirname, '/public/fail.html'));
   }
 });
 

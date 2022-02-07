@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>ITSystems</title>
+  </head>
+  <body>
+      <div class="uk-container uk-position-center">
+        
+        <div class="uk-flex uk-flex-center uk-flex-middle uk-text-center">
+            <div class="uk-card uk-card-default uk-card-body">
+              <form>
+                <div class="uk-margin">
+                  <img src="./images/logo.png" width="200px" alt="logo" />
+                </div>
+                <br/>
+                <div class="uk-margin">
+                  <div class="uk-form-label uk-text-bold uk-text-small">Password</div>
+                </div>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                        <input class="uk-input uk-text-center uk-text-bold uk-text-small" type="text" id="inputPassword">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                  <button class="uk-button uk-button-primary" id="login">Confirm identity</button>
+                </div>
+              </form>
+            </div>
+        </div>
+
+      </div>
+
+    <script>
+      
+      
+      $(document).ready(function () {
+        
+        localStorage.removeItem("auth");
+        
+        $("#login").click(function (e) {
+          e.preventDefault();
+          clave = $("#inputPassword").val();
+          console.log(clave);
+          $.ajax({
+            type: "POST",
+            url: window.location.origin + "/login",
+            data: "clave=" + clave,
+            success: function (html) {
+              console.log(html)
+              if (html === "null") {
+                alert("Los datos ingresados no son correctos.")
+              } else {
+                localStorage.setItem('auth', 'correcto');
+                location.href = window.location.origin + "/dashboard";
+              }
+            },
+          });
+        });
+      });
+      
+    </script>
+  </body>
+</html>

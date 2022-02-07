@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>ITSystems</title>
+  </head>
+  <body>
+    <div class="uk-container uk-position-center">
+      <div class="col uk-text-center">
+        <h1 style="margin-top: 40px;">No fue posible realizar la subida, intente nuevamente!.</h1>
+        <h4>Espere unos segundos y se redigira a la pantalla principal o presione en <a href="/dashboard">regresar</a></h4>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        if(!localStorage.getItem('auth')){
+          location.href = window.location.origin + "/login";
+        }
+
+        setTimeout(() => {
+          location.href = window.location.origin + "/dashboard";
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>
