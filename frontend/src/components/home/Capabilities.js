@@ -10,7 +10,7 @@ export const Capabilities = () => {
 
             <div className="uk-grid-small uk-child-width-expand@s uk-text-center uk-margin-large" uk-grid="true">
                 <div>
-                    <div className='uk-text-capitalize uk-text-large uk-text-normal uk-text-bold'>
+                    <div className='uk-text-capitalize uk-text-large uk-text-normal uk-text-bold uk-raleway'>
                         OUR CAPABILITIES
                     </div>
                 </div>

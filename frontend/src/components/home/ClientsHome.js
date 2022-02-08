@@ -20,7 +20,7 @@ export const ClientsHome = () => {
         uk-grid="true"
       >
         <div>
-          <div className="uk-text-capitalize uk-text-large uk-text-normal uk-text-bold uk-margin-bottom">
+          <div className="uk-text-capitalize uk-text-large uk-text-normal uk-text-bold uk-margin-bottom uk-raleway">
             OUR CLIENTS
           </div>
         </div>

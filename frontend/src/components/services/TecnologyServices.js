@@ -26,7 +26,7 @@ export const TecnologyServices = () => {
               uk-grid="true"
             >
               <div>
-                <div className="uk-text-capitalize uk-padding-bottom uk-text-large uk-text-normal uk-text-bold">
+                <div className="uk-text-capitalize uk-padding-bottom uk-text-large uk-text-normal uk-text-bold uk-raleway">
                     TECHNOLOGIES
                 </div>
               </div>

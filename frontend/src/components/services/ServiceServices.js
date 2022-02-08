@@ -12,7 +12,7 @@ export const ServiceServices = () => {
               uk-grid="true"
             >
               <div>
-                <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold">
+                <div className="uk-text-capitalize uk-text-large uk-text-center uk-text-bold uk-raleway">
                   SERVICES
                   <hr className="uk-divider divider"></hr>
                 </div>

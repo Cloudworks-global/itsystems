@@ -13,7 +13,7 @@ export const CardsAbout = () => {
 
                 <div className="uk-grid-small uk-child-width-expand@s" uk-grid="true">
                     <div>
-                        <div className='uk-text-capitalize uk-padding uk-text-large uk-text-center uk-text-bold'>
+                        <div className='uk-text-capitalize uk-padding uk-text-large uk-text-center uk-text-bold uk-raleway'>
                             OUR PROFESSIONAL SKILLS
                         </div>
                     </div>

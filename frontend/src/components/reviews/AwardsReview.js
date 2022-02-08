@@ -37,7 +37,7 @@ export const AwardsReview = () => {
             uk-grid="true"
           >
             <div className="uk-width-1-3@m">
-              <div class="uk-padding uk-light uk-visible@m uk-text-center">
+              <div class="uk-padding-small uk-light uk-visible@m uk-text-center">
                 <img
                   src={banner01}
                   width={"70%"}
@@ -109,10 +109,12 @@ export const AwardsReview = () => {
             </div>
           </div>
 
+          <br/>
           <hr className="uk-divider divider01"></hr>
+          <br/>
 
           <div
-            class="uk-grid-collapse uk-flex uk-flex-center uk-flex-middle"
+            class="uk-grid-collapse uk-flex uk-flex-center uk-flex-middle uk-margin-bottom"
             uk-grid="true"
           >
             <div className="uk-width-expand@m">
@@ -164,7 +166,7 @@ export const AwardsReview = () => {
               </p>
             </div>
             <div className="uk-width-1-3@m">
-              <div class="uk-padding uk-light uk-visible@m uk-text-center">
+              <div class="uk-padding-small uk-light uk-visible@m uk-text-center">
                 <img
                   src={banner02}
                   width={"70%"}
