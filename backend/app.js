@@ -26,6 +26,30 @@ app.use(
 );
 
 // Pages
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/about", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/services", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/careers", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/contact", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/reviews-awards", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
 app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/login.html");
 });
