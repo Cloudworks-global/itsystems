@@ -70,13 +70,14 @@ export const FormContact = () => {
                     Messsage
                 </label>
                 <div className="uk-form-controls">
-                    <input
-                    className="uk-input"
+                    <textarea
+                    class="uk-textarea"
                     id="messsage"
                     type="text"
                     placeholder="Messsage..."
                     required
-                    />
+                    rows="5"
+                    ></textarea>
                 </div>
                 </div>
 
