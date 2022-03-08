@@ -22,7 +22,7 @@ export const FormContact = () => {
             <form className="uk-form-stacked">
                 <div className="uk-margin">
                 <label className="uk-form-label" for="form-stacked-text">
-                    Name
+                    * Name
                 </label>
                 <div className="uk-form-controls">
                     <input
@@ -37,7 +37,7 @@ export const FormContact = () => {
 
                 <div className="uk-margin">
                 <label className="uk-form-label" for="form-stacked-text">
-                    Email
+                    * Email
                 </label>
                 <div className="uk-form-controls">
                     <input
@@ -60,14 +60,13 @@ export const FormContact = () => {
                     id="phone"
                     type="text"
                     placeholder="Phone..."
-                    required
                     />
                 </div>
                 </div>
 
                 <div className="uk-margin">
                 <label className="uk-form-label" for="form-stacked-text">
-                    Messsage
+                    * Messsage
                 </label>
                 <div className="uk-form-controls">
                     <textarea

@@ -4,27 +4,33 @@ font-family: 'Titillium Web', sans-serif;
 */
 
 body {
-  font-family: 'Titillium Web', sans-serif !important;
+  font-family: "Titillium Web", sans-serif !important;
   color: #1a1f2f !important;
   font-weight: 400 !important;
 }
 
-.uk-form-label{
-  font-family: 'Titillium Web', sans-serif !important;
+.uk-padding-xsmall {
+  padding: 0.2rem;
+}
+
+.uk-form-label {
+  font-family: "Titillium Web", sans-serif !important;
   font-weight: bold;
   font-size: 17px;
 }
 
-.uk-navbar-item, .uk-navbar-nav > li > a{
-  font-family: 'Titillium Web', sans-serif !important;
+.uk-navbar-item,
+.uk-navbar-nav > li > a {
+  font-family: "Titillium Web", sans-serif !important;
 }
 
-.uk-card-title, .uk-article-title{
-  font-family: 'Raleway', sans-serif !important;
+.uk-card-title,
+.uk-article-title {
+  font-family: "Raleway", sans-serif !important;
 }
 
-.uk-raleway{
-  font-family: 'Raleway', sans-serif !important;
+.uk-raleway {
+  font-family: "Raleway", sans-serif !important;
 }
 
 .color-white {
@@ -36,7 +42,9 @@ body {
   border-top: 2px solid #a1a1a1 !important;
 }
 
-.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle{
+.uk-navbar-item,
+.uk-navbar-nav > li > a,
+.uk-navbar-toggle {
   min-height: 50px !important;
 }
 
@@ -108,24 +116,24 @@ body {
 }
 
 .uk-button-pink {
-  background-color: #EA32A0;
+  background-color: #ea32a0;
   color: white;
   border-radius: 0.4rem;
-  border-color: #EA32A0;
+  border-color: #ea32a0;
 }
 
 .uk-button-pink:hover {
-  background-color: #EA32A0;
+  background-color: #ea32a0;
   color: white;
   border-radius: 0.4rem;
-  border-color: #EA32A0;
+  border-color: #ea32a0;
 }
 
 .uk-button-pink:focus {
-  background-color: #EA32A0;
+  background-color: #ea32a0;
   color: white;
   border-radius: 0.4rem;
-  border-color: #EA32A0;
+  border-color: #ea32a0;
 }
 
 .uk-grid-divider > :not(.uk-first-column)::before {
@@ -160,8 +168,8 @@ body {
   color: #1a1f2f !important;
 }
 
-.blue-marine02{
-  color: #2A3456 !important;
+.blue-marine02 {
+  color: #2a3456 !important;
 }
 
 .blue-white {
@@ -172,7 +180,7 @@ body {
   font-size: 5rem !important;
 }
 
-.font-4{
+.font-4 {
   font-size: 3.8rem !important;
 }
 
@@ -283,7 +291,7 @@ h6 {
 }
 
 .background-gray {
-  background: #EFEFEF !important;
+  background: #efefef !important;
 }
 
 .background-celest {

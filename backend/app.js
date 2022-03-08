@@ -200,8 +200,8 @@ app.post("/email-cv", uploadCv.array("cv"), async (req, res) => {
       text: `Prueba de Texto`,
       attachments: [
         {
-          filename: "demo.pdf",
-          path: __dirname + "./public/files/demo.pdf",
+          filename: arrayfiles,
+          path: __dirname + `./public/files/${arrayfiles}`,
         },
       ],
     });
