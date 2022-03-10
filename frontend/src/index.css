@@ -9,6 +9,17 @@ body {
   font-weight: 400 !important;
 }
 
+#__react-alert__ div div div {
+  /* width: auto !important; */
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  text-transform: initial !important;
+  font:inherit !important;
+  padding: 8px 10px;
+}
+
 .uk-padding-xsmall {
   padding: 0.2rem;
 }

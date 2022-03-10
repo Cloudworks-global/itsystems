@@ -16,19 +16,23 @@ export const FormContact = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("name", nameRef.current.value);
-    formData.append("email", emailRef.current.value);
-    formData.append("phone", phoneRef.current.value);
-    formData.append("message", messageRef.current.value);
-    axios
-      .post(BASE_URL + "/contacts", formData)
-      .then((response) => alert.show(response.data.message));
+    if(!nameRef.current.value || !emailRef.current.value || !messageRef.current.value){
+      alert.show('Complete the required fields.')
+    }else{
+      const formData = new FormData();
+      formData.append("name", nameRef.current.value);
+      formData.append("email", emailRef.current.value);
+      formData.append("phone", phoneRef.current.value);
+      formData.append("message", messageRef.current.value);
+      axios
+        .post(BASE_URL + "/contacts", formData)
+        .then((response) => alert.show(response.data.message));
 
-    nameRef.current.value = "";
-    emailRef.current.value = "";
-    phoneRef.current.value = "";
-    messageRef.current.value = "";
+      nameRef.current.value = "";
+      emailRef.current.value = "";
+      phoneRef.current.value = "";
+      messageRef.current.value = "";
+    }
   };
 
   return (
@@ -56,7 +60,6 @@ export const FormContact = () => {
                   ref={nameRef}
                   type="text"
                   placeholder="Name..."
-                  required
                 />
               </div>
             </div>
@@ -71,7 +74,6 @@ export const FormContact = () => {
                   ref={emailRef}
                   type="text"
                   placeholder="Email..."
-                  required
                 />
               </div>
             </div>
@@ -100,7 +102,6 @@ export const FormContact = () => {
                   ref={messageRef}
                   type="text"
                   placeholder="Messsage..."
-                  required
                   rows="5"
                 ></textarea>
               </div>

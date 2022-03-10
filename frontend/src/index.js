@@ -11,8 +11,9 @@ import { BrowserRouter } from "react-router-dom";
 
 const options = {
   position: positions.BOTTOM_RIGHT,
-  timeout: 5000,
-  transition: transitions.SCALE
+  timeout: 3000,
+  transition: transitions.SCALE,
+  type: 'error'
 }
 
 ReactDOM.render(
