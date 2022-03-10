@@ -84,7 +84,7 @@ app.get("/list-clients", async (req, res) => {
       res.json(archivos);
     });
   } catch (error) {
-    res.sendFile(path.join(__dirname, '/public/fail.html'));
+    res.sendFile(path.join(__dirname, "/public/fail.html"));
   }
 });
 
@@ -101,7 +101,7 @@ app.get("/list-technology", async (req, res) => {
       }
     );
   } catch (error) {
-    res.sendFile(path.join(__dirname, '/public/fail.html'));
+    res.sendFile(path.join(__dirname, "/public/fail.html"));
   }
 });
 
@@ -126,12 +126,20 @@ app.post(
   async (req, res) => {
     const arrayfiles = req.files;
     try {
-      Filter.render(arrayfiles[0].path, Filter.preset.grayscale, function (result) {
-        result.data.pipe(fs.createWriteStream(arrayfiles[0].destination+arrayfiles[0].filename));
-        res.sendFile(path.join(__dirname, '/public/success.html'));
-      });
+      Filter.render(
+        arrayfiles[0].path,
+        Filter.preset.grayscale,
+        function (result) {
+          result.data.pipe(
+            fs.createWriteStream(
+              arrayfiles[0].destination + arrayfiles[0].filename
+            )
+          );
+          res.sendFile(path.join(__dirname, "/public/success.html"));
+        }
+      );
     } catch (error) {
-      res.sendFile(path.join(__dirname, '/public/fail.html'));
+      res.sendFile(path.join(__dirname, "/public/fail.html"));
     }
   }
 );
@@ -154,12 +162,20 @@ var uploadClients = multer({ storage: storageClients });
 app.post("/clients", uploadClients.array("file-clients"), async (req, res) => {
   const arrayfiles = req.files;
   try {
-    Filter.render(arrayfiles[0].path, Filter.preset.grayscale, function (result) {
-      result.data.pipe(fs.createWriteStream(arrayfiles[0].destination+arrayfiles[0].filename));
-      res.sendFile(path.join(__dirname, '/public/success.html'));
-    });
+    Filter.render(
+      arrayfiles[0].path,
+      Filter.preset.grayscale,
+      function (result) {
+        result.data.pipe(
+          fs.createWriteStream(
+            arrayfiles[0].destination + arrayfiles[0].filename
+          )
+        );
+        res.sendFile(path.join(__dirname, "/public/success.html"));
+      }
+    );
   } catch (error) {
-    res.sendFile(path.join(__dirname, '/public/fail.html'));
+    res.sendFile(path.join(__dirname, "/public/fail.html"));
   }
 });
 
@@ -195,25 +211,32 @@ app.post("/email-cv", uploadCv.array("cv"), async (req, res) => {
 
     let info = await transporter.sendMail({
       from: '"ITSystems" <emensaje@connaxis.com>',
-      to: "ezequiel@identy.cloud",
+      to: "emensaje@connaxis.com",
       subject: "ITSystems - Email",
       text: `Prueba de Texto`,
       attachments: [
         {
-          filename: arrayfiles,
-          path: __dirname + `./public/files/${arrayfiles}`,
+          filename: arrayfiles[0].filename,
+          path: __dirname + `./public/files/${arrayfiles[0].filename}`,
         },
       ],
     });
 
-    res.sendFile(path.join(__dirname, '/public/success.html'));
+    res
+      .status(200)
+      .json({ message: "La Información fue enviada exitosamente" });
   } catch (error) {
-    res.sendFile(path.join(__dirname, '/public/fail.html'));
+    res
+      .status(200)
+      .json({
+        message:
+          "No fue posible enviar la información solicitada, intente mas tarde",
+      });
   }
 });
 
-app.post("/email", async (req, res) => {
-  const { email } = req.body;
+app.post("/contacts", async (req, res) => {
+  const { name, email, phone, messsage } = req.body;
   try {
     let transporter = nodemailer.createTransport({
       host: "mail.smtp2go.com",
@@ -227,14 +250,21 @@ app.post("/email", async (req, res) => {
 
     let info = await transporter.sendMail({
       from: '"ITSystems" <emensaje@connaxis.com>',
-      to: "ezequiel@identy.cloud",
+      to: "emensaje@connaxis.com",
       subject: "ITSystems - Email",
       text: `Prueba de Texto`,
     });
 
-    res.send("Message sent: %s", info.messageId);
+    res
+      .status(200)
+      .json({ message: "La Información fue enviada exitosamente" });
   } catch (error) {
-    res.sendFile(path.join(__dirname, '/public/fail.html'));
+    res
+      .status(200)
+      .json({
+        message:
+          "No fue posible enviar la información solicitada, intente mas tarde",
+      });
   }
 });
 
