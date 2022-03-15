@@ -9,7 +9,7 @@ export const Navbar = () => {
     <div className="uk-container uk-container-large">
       <nav className="uk-navbar-container uk-navbar-transparent uk-margin-bottom" uk-navbar="true">
         <div className="uk-navbar-left">
-          <Link to="#" className="uk-logo">
+          <Link to="/" className="uk-logo">
             <img className="uk-responsive-width" style={{
               padding: "1rem",
               width: "200px"
@@ -55,7 +55,7 @@ export const Navbar = () => {
 
                 <button className="uk-offcanvas-close" type="button" uk-close='true'></button>
 
-                <h3>Menu</h3>
+                <h4 className="uk-raleway uk-text-bold">MENU</h4>
 
                 <ul className="uk-list">
                   <li className={({isActive})=>(isActive ? "active" : "")}>
@@ -71,7 +71,7 @@ export const Navbar = () => {
                     <NavLink to="/clients">CLIENTS</NavLink>
                   </li> */}
                   <li className={({isActive})=>(isActive ? "active" : "")}>
-                    <NavLink to="/carrers">CARRERS</NavLink>
+                    <NavLink to="/careers">CAREERS</NavLink>
                   </li>
                   {/* <li className={({isActive})=>(isActive ? "active" : "")}>
                     <NavLink to="/awards">AWARDS</NavLink>

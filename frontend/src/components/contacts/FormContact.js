@@ -94,14 +94,14 @@ export const FormContact = () => {
 
             <div className="uk-margin">
               <label className="uk-form-label" for="form-stacked-text">
-                * Messsage
+                * Message
               </label>
               <div className="uk-form-controls">
                 <textarea
                   class="uk-textarea"
                   ref={messageRef}
                   type="text"
-                  placeholder="Messsage..."
+                  placeholder="Message..."
                   rows="5"
                 ></textarea>
               </div>

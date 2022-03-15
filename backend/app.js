@@ -196,24 +196,24 @@ var uploadCv = multer({ storage: storageCv });
 
 app.post("/email-cv", uploadCv.array("cv"), async (req, res) => {
   const arrayfiles = req.files;
-  const { name, email, phone, messsage } = req.body;
+  const { name, email, phone, message } = req.body;
 
   try {
     let transporter = nodemailer.createTransport({
-      host: "mail.smtp2go.com",
-      port: 2525,
-      secure: false,
+      host: process.env.HOST,
+      port: process.env.PORT,
+      secure: process.env.SECURE,
       auth: {
-        user: "EzequielNunez",
-        pass: "Divhmtldiv32",
+        user: process.env.USER,
+        pass: process.env.PASS,
       },
     });
 
     let info = await transporter.sendMail({
-      from: '"ITSystems" <emensaje@connaxis.com>',
-      to: "emensaje@connaxis.com",
-      subject: "ITSystems - Email",
-      text: `Prueba de Texto`,
+      from: process.env.FROM,
+      to: process.env.TO,
+      subject: process.env.SUBJECT,
+      text: `Name: ${name} <br/> Email: ${email} <br/> Phone: ${phone} <br/> Message: ${message}`,
       attachments: [
         {
           filename: arrayfiles[0].filename,
@@ -224,46 +224,46 @@ app.post("/email-cv", uploadCv.array("cv"), async (req, res) => {
 
     res
       .status(200)
-      .json({ message: "La Información fue enviada exitosamente" });
+      .json({ message: "The information was sent successfully" });
   } catch (error) {
     res
       .status(200)
       .json({
         message:
-          "No fue posible enviar la información solicitada, intente mas tarde",
+          "It was not possible to send the requested information, please try again later",
       });
   }
 });
 
 app.post("/contacts", async (req, res) => {
-  const { name, email, phone, messsage } = req.body;
+  const { name, email, phone, message } = req.body;
   try {
     let transporter = nodemailer.createTransport({
-      host: "mail.smtp2go.com",
-      port: 2525,
-      secure: false,
+      host: process.env.HOST,
+      port: process.env.PORT,
+      secure: process.env.SECURE,
       auth: {
-        user: "EzequielNunez",
-        pass: "Divhmtldiv32",
+        user: process.env.USER,
+        pass: process.env.PASS,
       },
     });
 
     let info = await transporter.sendMail({
-      from: '"ITSystems" <emensaje@connaxis.com>',
-      to: "emensaje@connaxis.com",
-      subject: "ITSystems - Email",
-      text: `Prueba de Texto`,
+      from: process.env.FROM,
+      to: process.env.TO,
+      subject: process.env.SUBJECT,
+      text: `Name: ${name} <br/> Email: ${email} <br/> Phone: ${phone} <br/> Message: ${message}`,
     });
 
     res
       .status(200)
-      .json({ message: "La Información fue enviada exitosamente" });
+      .json({ message: "The information was sent successfully" });
   } catch (error) {
     res
       .status(200)
       .json({
         message:
-          "No fue posible enviar la información solicitada, intente mas tarde",
+          "It was not possible to send the requested information, please try again later",
       });
   }
 });

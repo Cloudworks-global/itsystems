@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import axios from "axios";
-import { useAlert } from 'react-alert'
+import { useAlert } from "react-alert";
 
 import { BASE_URL } from "../../utils/url";
 
@@ -11,7 +11,7 @@ export const FormCarrers = () => {
   const phoneRef = useRef();
   const messageRef = useRef();
 
-  const alert = useAlert()
+  const alert = useAlert();
 
   const [file, setFile] = useState(null);
 
@@ -26,12 +26,12 @@ export const FormCarrers = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if(!nameRef.current.value || !emailRef.current.value){
-      alert.show('Complete the required fields.')
-    }else{
+    if (!nameRef.current.value || !emailRef.current.value) {
+      alert.show("Complete the required fields.");
+    } else {
       if (!file) {
-        alert.show('You must select a resume file.')
-      }else{
+        alert.show("You must select a resume file.");
+      } else {
         const formData = new FormData();
         formData.append("name", nameRef.current.value);
         formData.append("email", emailRef.current.value);
@@ -45,7 +45,7 @@ export const FormCarrers = () => {
             },
           })
           .then((response) => alert.show(response.data.message));
-  
+
         nameRef.current.value = "";
         emailRef.current.value = "";
         phoneRef.current.value = "";
@@ -53,7 +53,6 @@ export const FormCarrers = () => {
         setFile(null);
       }
     }
-    
   };
 
   return (
@@ -105,14 +104,14 @@ export const FormCarrers = () => {
 
             <div className="uk-margin uk-margin-left uk-margin-right">
               <label className="uk-form-label color-white uk-text-bold">
-                Messsage
+                Message
               </label>
               <div className="uk-form-controls">
                 <textarea
                   className="uk-textarea"
                   ref={messageRef}
                   type="text"
-                  placeholder="Messsage..."
+                  placeholder="Message..."
                   rows="5"
                 ></textarea>
               </div>
@@ -128,10 +127,11 @@ export const FormCarrers = () => {
                       className="uk-margin-small-right uk-button-pink uk-padding-xsmall"
                       style={{ cursor: "pointer" }}
                     ></span>
-                    Archivo Cargado: {file.name}
+                    Uploaded File: {file.name}
                   </p>
                 )}
               </div>
+
               <div className="uk-flex uk-flex-right@m uk-flex-center">
                 <div className="js-upload" uk-form-custom="true">
                   <input
@@ -146,6 +146,7 @@ export const FormCarrers = () => {
                     className="uk-button uk-button-default uk-margin-right color-white uk-text-bold"
                     type="button"
                     onClick={handleOpenFileInput}
+                    style={{ padding: "0 10px", fontSize: '12px' }}
                   >
                     * UPLOAD RESUME
                   </button>

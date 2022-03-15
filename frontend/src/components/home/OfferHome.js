@@ -20,7 +20,7 @@ export const OfferHome = () => {
 
             <div className="uk-grid-medium uk-padding uk-child-width-1-1@s uk-child-width-1-2@m uk-grid-match" uk-grid="true">
                 <div>
-                    <div className="uk-card uk-card-body">
+                    <div className="uk-card uk-card-body" style={{padding: '0px 0px'}}>
                         <article className="uk-article">
 
                        
@@ -38,7 +38,7 @@ export const OfferHome = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="uk-card uk-card-body">
+                    <div className="uk-card uk-card-body" style={{padding: '0px 0px'}}>
                         <article className="uk-article">
 
                             <img width="80" alt="" src={iconos12}></img>
@@ -55,7 +55,7 @@ export const OfferHome = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="uk-card uk-card-body">
+                    <div className="uk-card uk-card-body" style={{padding: '0px 0px'}}>
                         <article className="uk-article">
 
                             <img width="80" alt="" src={iconos13}></img>
@@ -72,7 +72,7 @@ export const OfferHome = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="uk-card uk-card-body">
+                    <div className="uk-card uk-card-body" style={{padding: '0px 0px'}}>
                         <article className="uk-article">
 
                             <img width="80" alt="" src={iconos14}></img>

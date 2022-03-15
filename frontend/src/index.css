@@ -192,7 +192,11 @@ body {
 }
 
 .font-4 {
-  font-size: 3.8rem !important;
+  font-size: 3.4rem !important;
+}
+
+.font-8 {
+  font-size: 2.5rem !important;
 }
 
 .font-1 {

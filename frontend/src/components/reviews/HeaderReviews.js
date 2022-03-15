@@ -10,9 +10,8 @@ export const HeaderReviews = () => {
         <div>
           <div className="uk-card uk-card-body">
             <h1 className="blue-marine uk-text-bold uk-margin-small uk-raleway">
-              <span className="white">
-                OUR CLIENTS REVIEWS AND AWARDS
-              </span>
+              <span className="white font-4 uk-visible@s">OUR CLIENTS REVIEWS AND AWARDS</span>
+              <span className="white font-8 uk-hidden@s">OUR CLIENTS REVIEWS AND AWARDS</span>
               <br />
             </h1>
           </div>

@@ -10,9 +10,8 @@ export const HeaderCarrers = () => {
                 <div>
                 <div className="uk-card uk-card-body">
                     <h1 className="blue-marine uk-text-bold uk-margin-small uk-raleway">
-                    <span className="white font-4">
-                        Careers
-                    </span>
+                    <span className="white font-4 uk-visible@s">Careers</span>
+                    <span className="white font-8 uk-hidden@s">Careers</span>
                     <br />
                     </h1>
                 </div>

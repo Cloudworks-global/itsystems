@@ -27,6 +27,7 @@ export const HiringCarrers = () => {
                 <a
                   class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
                   href="#"
+                  style={{fontSize: '16px'}}
                 >
                   .NET Developer Junior
                 </a>
@@ -39,6 +40,7 @@ export const HiringCarrers = () => {
                 <a
                   class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
                   href="#"
+                  style={{fontSize: '16px'}}
                 >
                   .NET Developer Senior
                 </a>
@@ -51,6 +53,7 @@ export const HiringCarrers = () => {
                 <a
                   class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
                   href="#"
+                  style={{fontSize: '16px'}}
                 >
                   SharePoint Developer
                 </a>
@@ -63,6 +66,7 @@ export const HiringCarrers = () => {
                 <a
                   class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
                   href="#"
+                  style={{fontSize: '16px'}}
                 >
                   Tester
                 </a>

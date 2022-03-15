@@ -1,5 +1,4 @@
-import banner01 from "../../assets/sliders-07.jpg";
-import banner02 from "../../assets/sliders-06.jpg";
+import mobile from "../../assets/mobile.jpg";
 import banner03 from "../../assets/sliders-05.jpg";
 
 export const CarouselHome = () => {
@@ -10,7 +9,8 @@ export const CarouselHome = () => {
     >
       <ul className="uk-slideshow-items">
         <li>
-          <img src={banner03} alt="" uk-cover="true" />
+          <img src={banner03} className="uk-visible@s" alt="" uk-cover="true" />
+          <img src={mobile} className="uk-hidden@s" alt="" uk-cover="true" />
         </li>
       </ul>
     </div>
