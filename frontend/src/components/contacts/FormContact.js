@@ -60,6 +60,7 @@ export const FormContact = () => {
                   ref={nameRef}
                   type="text"
                   placeholder="Name..."
+                  required="true"
                 />
               </div>
             </div>
@@ -72,8 +73,9 @@ export const FormContact = () => {
                 <input
                   className="uk-input"
                   ref={emailRef}
-                  type="text"
+                  type="email"
                   placeholder="Email..."
+                  required="true"
                 />
               </div>
             </div>
@@ -86,7 +88,7 @@ export const FormContact = () => {
                 <input
                   className="uk-input"
                   ref={phoneRef}
-                  type="text"
+                  type="number"
                   placeholder="Phone..."
                 />
               </div>
@@ -103,6 +105,7 @@ export const FormContact = () => {
                   type="text"
                   placeholder="Message..."
                   rows="5"
+                  required="true"
                 ></textarea>
               </div>
             </div>

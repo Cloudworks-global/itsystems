@@ -70,6 +70,7 @@ export const FormCarrers = () => {
                   ref={nameRef}
                   type="text"
                   placeholder="Name..."
+                  required="true"
                 />
               </div>
             </div>
@@ -82,8 +83,9 @@ export const FormCarrers = () => {
                 <input
                   className="uk-input"
                   ref={emailRef}
-                  type="text"
+                  type="email"
                   placeholder="Email..."
+                  required="true"
                 />
               </div>
             </div>
@@ -96,7 +98,7 @@ export const FormCarrers = () => {
                 <input
                   className="uk-input"
                   ref={phoneRef}
-                  type="text"
+                  type="number"
                   placeholder="Phone..."
                 />
               </div>
@@ -113,6 +115,7 @@ export const FormCarrers = () => {
                   type="text"
                   placeholder="Message..."
                   rows="5"
+                  required="true"
                 ></textarea>
               </div>
             </div>
@@ -146,9 +149,13 @@ export const FormCarrers = () => {
                     className="uk-button uk-button-default uk-margin-right color-white uk-text-bold"
                     type="button"
                     onClick={handleOpenFileInput}
-                    style={{ padding: "0 10px", fontSize: '12px' }}
+                    style={{
+                      padding: "0 10px",
+                      fontSize: "12px",
+                      cursor: "pointer",
+                    }}
                   >
-                    * UPLOAD RESUME
+                    <span style={{ cursor: "pointer" }}>* UPLOAD RESUME</span>
                   </button>
                 </div>
                 <button className="uk-button uk-button-default uk-button-pink uk-text-bold">

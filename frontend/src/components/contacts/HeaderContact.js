@@ -11,8 +11,8 @@ export const HeaderContact = () => {
           <div>
             <div className="uk-card uk-card-body">
               <h1 className="blue-marine uk-text-bold uk-margin-small uk-raleway">
-                <span className="white font-4 uk-visible@s">Contact us</span>
-                <span className="white font-8 uk-hidden@s">Contact us</span>
+                <span className="white font-4 uk-visible@s">Contact Us</span>
+                <span className="white font-8 uk-hidden@s">Contact Us</span>
                 <br />
               </h1>
             </div>
