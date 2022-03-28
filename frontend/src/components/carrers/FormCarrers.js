@@ -16,7 +16,7 @@ export const FormCarrers = () => {
   const [file, setFile] = useState(null);
 
   const handleClear = () => {
-    setFile(null);
+    setFile("");
   };
 
   const handleOpenFileInput = () => {
@@ -32,25 +32,30 @@ export const FormCarrers = () => {
       if (!file) {
         alert.show("You must select a resume file.");
       } else {
-        const formData = new FormData();
-        formData.append("name", nameRef.current.value);
-        formData.append("email", emailRef.current.value);
-        formData.append("phone", phoneRef.current.value);
-        formData.append("message", messageRef.current.value);
-        formData.append("cv", file);
-        axios
-          .post(BASE_URL + "/email-cv", formData, {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          })
-          .then((response) => alert.show(response.data.message));
+        let re = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+        if (re.exec(emailRef.current.value)) {
+          const formData = new FormData();
+          formData.append("name", nameRef.current.value);
+          formData.append("email", emailRef.current.value);
+          formData.append("phone", phoneRef.current.value);
+          formData.append("message", messageRef.current.value);
+          formData.append("cv", file);
+          axios
+            .post(BASE_URL + "/email-cv", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            })
+            .then((response) => alert.show(response.data.message));
 
-        nameRef.current.value = "";
-        emailRef.current.value = "";
-        phoneRef.current.value = "";
-        messageRef.current.value = "";
-        setFile(null);
+          nameRef.current.value = "";
+          emailRef.current.value = "";
+          phoneRef.current.value = "";
+          messageRef.current.value = "";
+          setFile("");
+        } else {
+          alert.show("Enter a valid email.");
+        }
       }
     }
   };
@@ -70,7 +75,6 @@ export const FormCarrers = () => {
                   ref={nameRef}
                   type="text"
                   placeholder="Name..."
-                  required="true"
                 />
               </div>
             </div>
@@ -83,9 +87,8 @@ export const FormCarrers = () => {
                 <input
                   className="uk-input"
                   ref={emailRef}
-                  type="email"
+                  type="text"
                   placeholder="Email..."
-                  required="true"
                 />
               </div>
             </div>
@@ -115,7 +118,6 @@ export const FormCarrers = () => {
                   type="text"
                   placeholder="Message..."
                   rows="5"
-                  required="true"
                 ></textarea>
               </div>
             </div>
@@ -123,15 +125,18 @@ export const FormCarrers = () => {
             <div className="uk-margin uk-margin-left uk-margin-right">
               <div className="uk-flex uk-flex-center@m uk-flex-left@l">
                 {file && (
-                  <p className="uk-raleway uk-text-small uk-text-bold">
-                    <span
-                      onClick={handleClear}
-                      uk-icon="close"
-                      className="uk-margin-small-right uk-button-pink uk-padding-xsmall"
-                      style={{ cursor: "pointer" }}
-                    ></span>
-                    Uploaded File: {file.name}
-                  </p>
+                <p
+                  className="uk-raleway uk-text-small uk-text-bold"
+                  id="filename"
+                >
+                  <span
+                    onClick={handleClear}
+                    uk-icon="close"
+                    className="uk-margin-small-right uk-button-pink uk-padding-xsmall"
+                    style={{ cursor: "pointer" }}
+                  ></span>
+                  Uploaded File: {file?.name}
+                </p>
                 )}
               </div>
 

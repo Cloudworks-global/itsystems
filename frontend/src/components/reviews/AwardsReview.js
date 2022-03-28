@@ -33,11 +33,11 @@ export const AwardsReview = () => {
           </div>
 
           <div
-            class="uk-grid-collapse uk-flex uk-flex-center uk-flex-middle"
+            className="uk-grid-collapse uk-flex uk-flex-center uk-flex-middle"
             uk-grid="true"
           >
             <div className="uk-width-1-3@m">
-              <div class="uk-padding-small uk-light uk-visible@m uk-text-center">
+              <div className="uk-padding-small uk-light uk-visible@m uk-text-center">
                 <img
                   src={banner01}
                   width={"70%"}
@@ -75,7 +75,7 @@ export const AwardsReview = () => {
                 amazing reviews of our clients, we couldn’t be more grateful.
               </p>
 
-              <p class="uk-text-bold">
+              <p className="uk-text-bold">
                 “We are grateful to Clutch for choosing us to collect this
                 award. Thank you so much for this award.” — Andrés Barreiro,
                 Chief Executive Officer of ITSystems
@@ -114,7 +114,7 @@ export const AwardsReview = () => {
           <br/>
 
           <div
-            class="uk-grid-collapse uk-flex uk-flex-center uk-flex-middle uk-margin-bottom"
+            className="uk-grid-collapse uk-flex uk-flex-center uk-flex-middle uk-margin-bottom"
             uk-grid="true"
           >
             <div className="uk-width-expand@m">
@@ -166,7 +166,7 @@ export const AwardsReview = () => {
               </p>
             </div>
             <div className="uk-width-1-3@m">
-              <div class="uk-padding-small uk-light uk-visible@m uk-text-center">
+              <div className="uk-padding-small uk-light uk-visible@m uk-text-center">
                 <img
                   src={banner02}
                   width={"70%"}

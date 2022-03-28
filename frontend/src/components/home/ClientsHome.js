@@ -28,10 +28,10 @@ export const ClientsHome = () => {
 
       <div uk-slider="finite: true; autoplay: true">
 
-        <div class="uk-position-relative">
+        <div className="uk-position-relative">
 
-            <div class="uk-slider-container uk-light">
-                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m">
+            <div className="uk-slider-container uk-light">
+                <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m">
                 {data.map((data, index) => {
                  return (
                     <li key={index}>
@@ -57,7 +57,7 @@ export const ClientsHome = () => {
 
         </div>
 
-        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 
       </div>
 

@@ -5,7 +5,6 @@ import { About } from "../pages/About";
 import { Services } from "../pages/Services";
 import { Clients } from "../pages/Clients";
 import { Carrers } from "../pages/Carrers";
-import { Awards } from "../pages/Awards";
 import { Contact } from "../pages/Contact";
 import { ReviewsAwards } from "../pages/ReviewsAwards";
 
@@ -18,7 +17,6 @@ export const AppRouter = () => {
       <Route path="/services" element={<Services />} />
       <Route path="/clients" element={<Clients />} />
       <Route path="/careers" element={<Carrers />} />
-      <Route path="/awards" element={<Awards />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/reviews-awards" element={<ReviewsAwards />} />
     </Routes>

@@ -19,19 +19,25 @@ export const FormContact = () => {
     if(!nameRef.current.value || !emailRef.current.value || !messageRef.current.value){
       alert.show('Complete the required fields.')
     }else{
-      const formData = new FormData();
-      formData.append("name", nameRef.current.value);
-      formData.append("email", emailRef.current.value);
-      formData.append("phone", phoneRef.current.value);
-      formData.append("message", messageRef.current.value);
-      axios
-        .post(BASE_URL + "/contacts", formData)
-        .then((response) => alert.show(response.data.message));
+      let re = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+	    if(re.exec(emailRef.current.value)){
+        const formData = new FormData();
+        formData.append("name", nameRef.current.value);
+        formData.append("email", emailRef.current.value);
+        formData.append("phone", phoneRef.current.value);
+        formData.append("message", messageRef.current.value);
+        axios
+          .post(BASE_URL + "/contacts", formData)
+          .then((response) => alert.show(response.data.message));
 
-      nameRef.current.value = "";
-      emailRef.current.value = "";
-      phoneRef.current.value = "";
-      messageRef.current.value = "";
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        phoneRef.current.value = "";
+        messageRef.current.value = "";  
+      } else {
+        alert.show('Enter a valid email.')
+      }
+      
     }
   };
 
@@ -60,7 +66,6 @@ export const FormContact = () => {
                   ref={nameRef}
                   type="text"
                   placeholder="Name..."
-                  required="true"
                 />
               </div>
             </div>
@@ -73,9 +78,8 @@ export const FormContact = () => {
                 <input
                   className="uk-input"
                   ref={emailRef}
-                  type="email"
+                  type="text"
                   placeholder="Email..."
-                  required="true"
                 />
               </div>
             </div>
@@ -89,7 +93,6 @@ export const FormContact = () => {
                   className="uk-input"
                   ref={phoneRef}
                   type="number"
-                  placeholder="Phone..."
                 />
               </div>
             </div>
@@ -105,7 +108,6 @@ export const FormContact = () => {
                   type="text"
                   placeholder="Message..."
                   rows="5"
-                  required="true"
                 ></textarea>
               </div>
             </div>

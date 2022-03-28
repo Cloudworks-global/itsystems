@@ -25,53 +25,53 @@ export const HiringCarrers = () => {
             <ul uk-accordion="true">
               <li className=" uk-openuk-text-capitalize bg-blue-marine color-white uk-margin-top card-green uk-text-lead">
                 <a
-                  class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
+                  className="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
                   href="#"
                   style={{fontSize: '16px'}}
                 >
                   .NET Developer Junior
                 </a>
 
-                <div class="uk-accordion-content">
+                <div className="uk-accordion-content">
                   <FormCarrers />
                 </div>
               </li>
               <li className=" uk-openuk-text-capitalize bg-blue-marine01 color-white uk-margin-top card-green uk-text-lead">
                 <a
-                  class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
+                  className="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
                   href="#"
                   style={{fontSize: '16px'}}
                 >
                   .NET Developer Senior
                 </a>
 
-                <div class="uk-accordion-content">
+                <div className="uk-accordion-content">
                   <FormCarrers />
                 </div>
               </li>
               <li className=" uk-openuk-text-capitalize bg-blue-marine02 color-white uk-margin-top card-green uk-text-lead">
                 <a
-                  class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
+                  className="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
                   href="#"
                   style={{fontSize: '16px'}}
                 >
                   SharePoint Developer
                 </a>
 
-                <div class="uk-accordion-content">
+                <div className="uk-accordion-content">
                   <FormCarrers />
                 </div>
               </li>
               <li className=" uk-openuk-text-capitalize bg-blue-marine03 color-white uk-margin-top card-green uk-text-lead">
                 <a
-                  class="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
+                  className="uk-accordion-title color-white uk-text-center uk-padding-small uk-text-bold"
                   href="#"
                   style={{fontSize: '16px'}}
                 >
                   Tester
                 </a>
 
-                <div class="uk-accordion-content">
+                <div className="uk-accordion-content">
                   <FormCarrers />
                 </div>
               </li>
