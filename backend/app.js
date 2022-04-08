@@ -25,40 +25,15 @@ app.use(
   })
 );
 
-// Pages
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/about", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/services", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/careers", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/contact", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/reviews-awards", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/login", (req, res) => {
-  res.sendFile(__dirname + "/login.html");
+  res.sendFile(__dirname + "/public/login.html");
 });
 
 app.get("/dashboard", (req, res) => {
-  res.sendFile(__dirname + "/dashboard.html");
+  res.sendFile(__dirname + "/public/dashboard.html");
 });
 
-// EndPoint
+// EndPoint's
 app.post("/login", async (req, res) => {
   const { clave } = req.body;
   console.log(clave);
@@ -222,16 +197,12 @@ app.post("/email-cv", uploadCv.array("cv"), async (req, res) => {
       ],
     });
 
-    res
-      .status(200)
-      .json({ message: "The information was sent successfully" });
+    res.status(200).json({ message: "The information was sent successfully" });
   } catch (error) {
-    res
-      .status(200)
-      .json({
-        message:
-          "It was not possible to send the requested information, please try again later",
-      });
+    res.status(200).json({
+      message:
+        "It was not possible to send the requested information, please try again later",
+    });
   }
 });
 
@@ -255,16 +226,12 @@ app.post("/contacts", async (req, res) => {
       text: `Name: ${name} <br/> Email: ${email} <br/> Phone: ${phone} <br/> Message: ${message}`,
     });
 
-    res
-      .status(200)
-      .json({ message: "The information was sent successfully" });
+    res.status(200).json({ message: "The information was sent successfully" });
   } catch (error) {
-    res
-      .status(200)
-      .json({
-        message:
-          "It was not possible to send the requested information, please try again later",
-      });
+    res.status(200).json({
+      message:
+        "It was not possible to send the requested information, please try again later",
+    });
   }
 });
 
