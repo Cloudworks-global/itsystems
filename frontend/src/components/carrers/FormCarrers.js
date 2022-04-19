@@ -41,7 +41,7 @@ export const FormCarrers = () => {
           formData.append("message", messageRef.current.value);
           formData.append("cv", file);
           axios
-            .post(BASE_URL + "/email-cv", formData, {
+            .post(BASE_URL + "/careers", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
@@ -125,18 +125,18 @@ export const FormCarrers = () => {
             <div className="uk-margin uk-margin-left uk-margin-right">
               <div className="uk-flex uk-flex-center@m uk-flex-left@l">
                 {file && (
-                <p
-                  className="uk-raleway uk-text-small uk-text-bold"
-                  id="filename"
-                >
-                  <span
-                    onClick={handleClear}
-                    uk-icon="close"
-                    className="uk-margin-small-right uk-button-pink uk-padding-xsmall"
-                    style={{ cursor: "pointer" }}
-                  ></span>
-                  Uploaded File: {file?.name}
-                </p>
+                  <p
+                    className="uk-raleway uk-text-small uk-text-bold"
+                    id="filename"
+                  >
+                    <span
+                      onClick={handleClear}
+                      uk-icon="close"
+                      className="uk-margin-small-right uk-button-pink uk-padding-xsmall"
+                      style={{ cursor: "pointer" }}
+                    ></span>
+                    Uploaded File: {file?.name}
+                  </p>
                 )}
               </div>
 

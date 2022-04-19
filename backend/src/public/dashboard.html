@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css"
+    />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+
+    <title>ITSystems</title>
+  </head>
+  <body>
+    <div class="uk-container uk-position-center">
+      <div
+        class="uk-flex uk-flex-center uk-flex-middle uk-text-center uk-child-width-expand@s"
+        uk-grid
+      >
+        <div class="uk-background-primary uk-padding uk-light">
+          <h1 class="text-center" style="margin-top: 40px">
+            Upload <br />
+            Clients
+          </h1>
+          <div class="text-center p-5">
+            <form id="clientsForm">
+              <h4 for="formFileLg" class="form-label">Select images</h4>
+              <div class="uk-margin" uk-margin>
+                <div uk-form-custom="target: true">
+                  <input type="file" name="clients-files" accept="image/*" />
+                  <input
+                    class="uk-input uk-form-width-medium"
+                    type="text"
+                    placeholder="Select file"
+                    disabled
+                  />
+                </div>
+                <button type="submit" class="uk-button uk-button-default">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="uk-background-secondary uk-padding uk-light">
+          <h1 class="text-center" style="margin-top: 40px">
+            Upload Technology
+          </h1>
+          <div class="text-center p-5">
+            <form id="technologiesForm">
+              <h4 for="formFileLg" class="form-label">Select images</h4>
+              <div class="uk-margin" uk-margin>
+                <div uk-form-custom="target: true">
+                  <input
+                    type="file"
+                    name="technologies-files"
+                    accept="image/*"
+                  />
+                  <input
+                    class="uk-input uk-form-width-medium"
+                    type="text"
+                    placeholder="Select file"
+                    disabled
+                  />
+                </div>
+                <button type="submit" class="uk-button uk-button-default">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        if (!localStorage.getItem("token")) {
+          location.href = window.location.origin + "/";
+        }
+      };
+
+      document
+        .getElementById("clientsForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let formData = new FormData(this);
+          fetch("/clients", {
+            method: "POST",
+            body: formData,
+            headers: {
+              "x-access-token": localStorage.getItem("token"),
+            },
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              window.location.href = "/success";
+            })
+            .catch((err) => {
+              window.location.href = "/error";
+            });
+        });
+
+      document
+        .getElementById("technologiesForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let formData = new FormData(this);
+          fetch("/technologies", {
+            method: "POST",
+            body: formData,
+            headers: {
+              "x-access-token": localStorage.getItem("token"),
+            },
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              window.location.href = "/success";
+            })
+            .catch((err) => {
+              window.location.href = "/error";
+            });
+        });
+    </script>
+  </body>
+</html>

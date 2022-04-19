@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css"
+    />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+
+    <title>ITSystems</title>
+  </head>
+  <body>
+    <div class="uk-container uk-position-center">
+      <div class="uk-flex uk-flex-center uk-flex-middle uk-text-center">
+        <div class="uk-card uk-card-default uk-card-body">
+          <form id="loginForm">
+            <div class="uk-margin">
+              <img src="./images/logo.png" width="200px" alt="logo" />
+            </div>
+            <br />
+            <div class="uk-margin">
+              <div class="uk-inline">
+                <span
+                  class="uk-form-icon uk-form-icon-flip"
+                  uk-icon="icon: mail"
+                ></span>
+                <input
+                  class="uk-input uk-text-bold uk-text-small"
+                  type="text"
+                  id="inputEmail"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="uk-margin">
+              <div class="uk-inline">
+                <span
+                  class="uk-form-icon uk-form-icon-flip"
+                  uk-icon="icon: lock"
+                ></span>
+                <input
+                  class="uk-input uk-text-bold uk-text-small"
+                  type="password"
+                  id="inputPassword"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <br />
+            <div class="uk-margin">
+              <button class="uk-button uk-button-primary" type="submit">
+                Confirm identity
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        if (localStorage.getItem("token")) {
+          window.location.href = "./dashboard";
+        } else {
+          localStorage.clear();
+        }
+      };
+
+      const loginForm = document.getElementById("loginForm");
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = document.getElementById("inputEmail").value;
+        const password = document.getElementById("inputPassword").value;
+        const data = {
+          email: email,
+          password: password,
+        };
+        fetch("/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((res) => {
+            console.log(res);
+            if (res.auth) {
+              localStorage.setItem("token", res.token);
+              location.href = window.location.origin + "/dashboard";
+            } else {
+              alert(res.message);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -8,7 +8,7 @@ export const ClientsHome = () => {
   const [data, setData] = useState([]);
 
   useEffect(async () => {
-    return await axios.get(BASE_URL + "/list-clients").then((response) => {
+    return await axios.get(BASE_URL + "/clients").then((response) => {
       setData(response.data);
     });
   }, []);
@@ -27,41 +27,54 @@ export const ClientsHome = () => {
       </div>
 
       <div uk-slider="finite: true; autoplay: true">
-
         <div className="uk-position-relative">
+          <div className="uk-slider-container uk-light">
+            <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m">
+              {data.map((data, index) => {
+                return (
+                  <li key={index}>
+                    <div className="uk-panel">
+                      <img src={BASE_URL + `/clients/${data}`} alt={data} />
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
-            <div className="uk-slider-container uk-light">
-                <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m">
-                {data.map((data, index) => {
-                 return (
-                    <li key={index}>
-                      <div className="uk-panel">
-                        <img src={BASE_URL + `/clients/${data}`} alt={data} />
-                      </div>
-                    </li>
-                  );
-                })}
-                </ul>
-            </div>
+          <div className="uk-hidden@s uk-light">
+            <a
+              className="uk-position-center-left uk-position-small"
+              href="#"
+              uk-slidenav-previous="true"
+              uk-slider-item="previous"
+            ></a>
+            <a
+              className="uk-position-center-right uk-position-small"
+              href="#"
+              uk-slidenav-next="true"
+              uk-slider-item="next"
+            ></a>
+          </div>
 
-            <div className="uk-hidden@s uk-light">
-                <a className="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"></a>
-                <a className="uk-position-center-right uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
-            </div>
-
-            <div className="uk-visible@s">
-                <a className="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"></a>
-                <a className="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
-            </div>
-
-
+          <div className="uk-visible@s">
+            <a
+              className="uk-position-center-left-out uk-position-small"
+              href="#"
+              uk-slidenav-previous="true"
+              uk-slider-item="previous"
+            ></a>
+            <a
+              className="uk-position-center-right-out uk-position-small"
+              href="#"
+              uk-slidenav-next="true"
+              uk-slider-item="next"
+            ></a>
+          </div>
         </div>
 
         <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
       </div>
-
-      
     </div>
   );
 };

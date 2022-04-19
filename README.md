@@ -46,91 +46,7 @@ sudo apt install nginx
 sudo ufw allow 'Nginx HTTP'
 ```
 
-<hr>
-
-## Instalación de MySQL para el manejo de los datos de la aplicación
-
-```bash
-sudo apt install mysql-server
-
-sudo mysql_secure_installation
-```
-
-Responda "Y" sí, o cualquier otra cosa para continuar sin habilitar.
-
-```bash
-VALIDATE PASSWORD PLUGIN can be used to test passwords
-and improve security. It checks the strength of password
-and allows the users to set only those passwords which are
-secure enough. Would you like to setup VALIDATE PASSWORD plugin?
-
-Press y|Y for Yes, any other key for No:
-```
-
-Si ha habilitado la validación, el script también le pedirá que
-seleccione un nivel de validación de contraseña.
-Tenga en cuenta que si ingresa 2 , para el nivel más fuerte,
-recibirá errores cuando intente establecer cualquier contraseña
-que no contenga números, letras mayúsculas y minúsculas y caracteres especiales,
-o que se base en palabras comunes del diccionario.
-
-```bash
-There are three levels of password validation policy:
-
-LOW    Length >= 8
-MEDIUM Length >= 8, numeric, mixed case, and special characters
-STRONG Length >= 8, numeric, mixed case, special characters and dictionary file
-
-Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 1
-```
-
-A continuación, se le pedirá que envíe y confirme una contraseña de root.
-
-```bash
-Please set the password for root here.
-
-New password:
-
-Re-enter new password:
-```
-
 <br>
-
-## Configuracion del usuario de MySQL
-
-```bash
-sudo mysql
-```
-
-```SQL
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-```
-
-```SQL
-exit
-```
-
-<br>
-
-## Crear la base de datos de usuarios y las credenciales para el acceso desde el backend.
-
-```SQL
-mysql -u root -p
-```
-
-Se te pedira la contraseña.
-
-```SQL
-CREATE DATABASE itsystems;
-
-USE itsystems;
-
-CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, clave VARCHAR(255) NOT NULL);
-
-INSERT INTO users (clave) VALUES ('ITS42672903');
-
-exit
-```
 
 <hr>
 
@@ -171,7 +87,7 @@ cd itsystems/backend
 
 <br>
 
-### Configurar las variables de entorno para conectar a la base de datos y establecer el servidor SMTP
+### Configurar las variables de entorno para establecer el servidor SMTP y otras configuraciones
 
 ```bash
 cp .env.example .env
@@ -181,13 +97,10 @@ sudo nano .env
 
 ```bash
 # BACKEND PORT
-PORT=8000
+PORT=3000
 
-# DATABASE CONFIGURATION
-DB_SERVER=localhost
-DB_USER=root
-DB_PASSWORD=password
-DB_DATABASE=itsystems
+# AUTH CONFIGURATION
+JWT_SECRET='s3cr3t'
 
 # SMTP SETTINGS
 FROM=
@@ -216,10 +129,41 @@ sudo npm update
 
 <br>
 
+### Creación de la base de datos y migración de usuarios
+
+```bash
+npm run seed
+```
+
+De forma predeterminada, el usuario que se crea en la base de datos contine las siguientes credenciales:
+
+```bash
+email: admin@itsystems.com
+password: 1tsyst3ms
+```
+
+Puede cambiar las credenciales por defecto o agregar nuevos usuarios modificando
+el archivo ./backend/src/database/seeders/users.seeder.js
+
+```js
+//...
+
+// ______________ USUARIOS ______________
+const users = [
+  {
+    email: "admin@itsystems.com",
+    password: "1tsyst3ms",
+  },
+];
+// ______________________________________
+
+//...
+```
+
 ### PM2 para el proyecto
 
 ```bash
-sudo pm2 start app.js
+sudo pm2 start ./src/index.js
 
 sudo pm2 startup systemd
 
@@ -229,11 +173,8 @@ sudo pm2 save
 Ahora podra acceder a su dashboard de desarrollo en la siguiente dirección:
 
 ```
-your_domain_or_ip:8000
+tu_dominio_o_ip:3000
 ```
-
-Podra iniciar sesión con la clave ingresda en su tabla 'users'
-al momento de crear la base de datos.
 
 <hr>
 
@@ -254,7 +195,13 @@ sudo nano ./src/utils/url.js
 editar el archivo para inlcuir la URL en la cual se esta ejecutando el backend
 
 ```js
-export const BASE_URL = "http://your_domain_or_ip:8000";
+export const BASE_URL = "http://tu_dominio_o_ip:3000";
+```
+
+En caso de que se proteja el dominio mediante https debera modificar el archivo de la siguiente manera:
+
+```js
+export const BASE_URL = "https://tu_dominio_o_ip:3000";
 ```
 
 <br>
@@ -292,7 +239,7 @@ configure el archivo para incluir las siguientes lineas:
 ```
 server {
   listen 80;
-  server_name server_domain_or_IP;
+  server_name tu_dominio_o_ip;
   root /var/www/itsystems/frontend/build;
 }
 ```

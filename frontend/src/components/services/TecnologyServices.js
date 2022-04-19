@@ -7,11 +7,10 @@ import axios from "axios";
 import { BASE_URL } from "../../utils/url";
 
 export const TecnologyServices = () => {
-
   const [data, setData] = useState([]);
 
   useEffect(async () => {
-    return await axios.get(BASE_URL + "/list-technology").then((response) => {
+    return await axios.get(BASE_URL + "/technologies").then((response) => {
       setData(response.data);
     });
   }, []);
@@ -27,7 +26,7 @@ export const TecnologyServices = () => {
             >
               <div>
                 <div className="uk-text-capitalize uk-padding-bottom uk-text-large uk-text-normal uk-text-bold uk-raleway">
-                    TECHNOLOGIES
+                  TECHNOLOGIES
                 </div>
               </div>
             </div>
@@ -37,22 +36,24 @@ export const TecnologyServices = () => {
               uk-slider="true"
             >
               <div className="uk-slider-container">
-                <div className="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-flex-middle uk-text-center" uk-grid="true">
-                  
+                <div
+                  className="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-flex-middle uk-text-center"
+                  uk-grid="true"
+                >
                   {data.map((data, index) => {
                     return (
                       <div key={index}>
-                          <div className="uk-card uk-card-body">
-                            <img src={BASE_URL + `/technology/${data}`} alt={data} />
-                          </div>
+                        <div className="uk-card uk-card-body">
+                          <img
+                            src={BASE_URL + `/technology/${data}`}
+                            alt={data}
+                          />
+                        </div>
                       </div>
                     );
                   })}
-                  
                 </div>
               </div>
-
-              
             </div>
           </div>
         </div>
